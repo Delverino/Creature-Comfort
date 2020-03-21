@@ -90,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
 
             body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
             jump_end = 0;
-            jump_expiration = 0;
 
         }
     }
