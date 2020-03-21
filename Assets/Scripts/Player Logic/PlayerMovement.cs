@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Default height of the camera")]
     public float base_height;
 
+
+    [Tooltip("An audiosource with the clip for jumping loaded")]
+    public AudioSource jump_sound;
+
     // Update is called once per frame
     void Update()
     {
@@ -66,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         //Jump logic!
         if ( (jumpIsBuffered() || Input.GetAxis("Vertical") == 1) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
         {
-
+            jump_sound.Play();
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
             coyote_end = 0;
             jump_end = jump_time + Time.realtimeSinceStartup;
@@ -115,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         return Time.realtimeSinceStartup < jump_expiration;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision) //TODO change to ontriggerstay2d, and implement a focus stack on camera
     {
         if (collision.gameObject.CompareTag("CameraFocus"))
         {

@@ -1,0 +1,7 @@
+Oftentimes in unity a solution will require certain standards to be kept up among other code for it to function properly.
+This is documentation of those standards.
+
+
+"CameraFocus" is a tag only for camera focus points, anything with this tag must have a kinematic rigidbody and a 2d collider
+
+Anything which the player can jump from must have the layer "Ground"
