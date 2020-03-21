@@ -34,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Time the player floats at the top of the jump arc")]
     public float hang_time = 0.1f;
 
+
+    [Tooltip("The main camera which follows the player")]
+    public SmartCamera Cam;
+
+    [Tooltip("Default height of the camera")]
+    public float base_height;
+
     // Update is called once per frame
     void Update()
     {
@@ -106,5 +113,21 @@ public class PlayerMovement : MonoBehaviour
     bool jumpIsBuffered()
     {
         return Time.realtimeSinceStartup < jump_expiration;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("CameraFocus"))
+        {
+            Cam.focus(collision.gameObject.transform, collision.transform.localScale.y);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("CameraFocus"))
+        {
+            Cam.focus(transform, base_height);
+        }
     }
 }
