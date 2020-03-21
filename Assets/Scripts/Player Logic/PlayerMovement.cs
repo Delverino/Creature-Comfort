@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Jump logic!
-        if ( (jumpIsBuffered() || Input.GetAxis("Vertical") == 1) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
+        if ( (jumpIsBuffered() /*|| Input.GetAxis("Vertical") == 1*/) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
         {
             jump_sound.Play();
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
