@@ -26,13 +26,14 @@ public class TransformPlayer : MonoBehaviour
     // returns previously active animal and sets new one
     void SetActiveAnimal(Vector3 position, int new_animal)
     {
+        animals[new_animal].SetActive(true);
+        animals[new_animal].transform.position = position;
+        cam.Focus(animals[new_animal].transform);
+
         for ( int i = 0; i < animals.Count; i++ )
         {
             if ( i == new_animal )
             {
-                animals[i].SetActive(true);
-                animals[i].transform.position = position;
-                cam.Focus(animals[i].transform);
             }
             else
             {

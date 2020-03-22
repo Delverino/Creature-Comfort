@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         return Time.realtimeSinceStartup < jump_expiration;
     }
 
-    private void OnTriggerStay2D(Collider2D collision) //TODO change to ontriggerstay2d, and implement a focus stack on camera
+    private void OnTriggerEnter2D(Collider2D collision) //TODO change to ontriggerstay2d, and implement a focus stack on camera
     {
         if (collision.gameObject.CompareTag("CameraFocus"))
         {
@@ -127,7 +127,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CameraFocus"))
         {
-            Cam.Focus(transform);
+            Cam.RemoveView(collision.gameObject.transform);
+            Debug.Log(gameObject);
         }
     }
 }
