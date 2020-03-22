@@ -38,9 +38,6 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The main camera which follows the player")]
     public SmartCamera Cam;
 
-    [Tooltip("Default height of the camera")]
-    public float base_height;
-
 
     [Tooltip("An audiosource with the clip for jumping loaded")]
     public AudioSource jump_sound;
@@ -122,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CameraFocus"))
         {
-            Cam.focus(collision.gameObject.transform, collision.transform.localScale.y);
+            Cam.Focus(collision.gameObject.transform, collision.transform.localScale.y);
         }
     }
 
@@ -130,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("CameraFocus"))
         {
-            Cam.focus(transform, base_height);
+            Cam.Focus(transform);
         }
     }
 }

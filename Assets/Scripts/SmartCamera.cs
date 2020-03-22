@@ -12,6 +12,9 @@ public class SmartCamera : MonoBehaviour
 
     public Camera cam;
 
+    [Tooltip("Default height of the camera")]
+    public float base_height;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +29,15 @@ public class SmartCamera : MonoBehaviour
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, target_size, response);
     }
 
-    public void focus(Transform new_target, float height)
+    public void Focus(Transform new_target, float height)
     {
         curr_target = new_target;
         target_size = height / 2;
+    }
+
+    public void Focus(Transform new_target)
+    {
+        curr_target = new_target;
+        target_size = base_height / 2;
     }
 }
