@@ -2369,12 +2369,12 @@ PrefabInstance:
     - target: {fileID: 4540737328117837251, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: jump_impulse
-      value: 17
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837251, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: jump_time
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837251, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
@@ -2635,12 +2635,12 @@ PrefabInstance:
     - target: {fileID: 6557260801976647524, guid: 4e471fdd987f83140af78a2bda7b01aa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.11834
+      value: -20.405
       objectReference: {fileID: 0}
     - target: {fileID: 6557260801976647524, guid: 4e471fdd987f83140af78a2bda7b01aa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.7
+      value: 3.179
       objectReference: {fileID: 0}
     - target: {fileID: 6557260801976647524, guid: 4e471fdd987f83140af78a2bda7b01aa,
         type: 3}
@@ -3433,6 +3433,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328447848317, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: squish.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328447848317, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: squish.y
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
