@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Rigidbody that controls this object (serialized to save a call to GameObject.Find())")]
     public Rigidbody2D body;
 
-    [Tooltip("Time before impact in which a jump input will still register")]
-    public float jump_buffer;
+    //[Tooltip("Time before impact in which a jump input will still register")]
+    //public float jump_buffer;
+    bool jump_is_buffered;
 
     [Tooltip("Detects ground for the purpose of jumping")]
     public Transform right_foot;
@@ -65,12 +66,13 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Jump logic!
-        if ( (jumpIsBuffered() /*|| Input.GetAxis("Vertical") == 1*/) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
+        if ( (jump_is_buffered /*|| Input.GetAxis("Vertical") == 1*/) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
         {
             jump_sound.Play();
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
             coyote_end = 0;
             jump_end = jump_time + Time.realtimeSinceStartup;
+            jump_is_buffered = false;
 
         } else if(Input.GetAxis("Vertical") > 0 && Time.realtimeSinceStartup < jump_end) //Keep jumping if they hold the key
         {
@@ -106,14 +108,17 @@ public class PlayerMovement : MonoBehaviour
     //Begins jump buffer
     void jumpInput()
     {
-        jump_expiration = jump_buffer + Time.realtimeSinceStartup;
+        if (body.velocity.y <= 0 || isGrounded())
+        {
+            jump_is_buffered = true;
+        }
     }
 
-    //Checks if a jump is buffered
+    /*Checks if a jump is buffered
     bool jumpIsBuffered()
     {
         return Time.realtimeSinceStartup < jump_expiration;
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D collision) //TODO change to ontriggerstay2d, and implement a focus stack on camera
     {
