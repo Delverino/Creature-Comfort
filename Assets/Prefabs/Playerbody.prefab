@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4540737327123766616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.511, y: 0, z: 0}
+  m_LocalPosition: {x: 0.439, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4540737328447848306}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4540737327875612563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.512, y: 0, z: 0}
+  m_LocalPosition: {x: -0.462, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4540737328447848306}
@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 4540737328117837248}
   - component: {fileID: 4540737328117837249}
   - component: {fileID: 4540737328117837254}
-  - component: {fileID: 4540737328117837255}
   - component: {fileID: 4540737328117837261}
   - component: {fileID: 4540737328117837251}
   - component: {fileID: 4540737328117837250}
@@ -169,32 +168,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &4540737328117837255
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4540737328117837252}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: b24b36268b81a944790f8684fa027464, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.024, y: 1.024}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!58 &4540737328117837261
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -226,7 +199,6 @@ MonoBehaviour:
   jump_impulse: 15
   speed: 8
   body: {fileID: 4540737328117837254}
-  jump_buffer: 0.3
   right_foot: {fileID: 4540737327123766619}
   left_foot: {fileID: 4540737327875612562}
   jumpable:

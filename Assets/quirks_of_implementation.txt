@@ -1,14 +1,15 @@
 Oftentimes in unity a solution will require certain standards to be kept up among other code for it to function properly.
 This is documentation of those standards.
 
-Both variables and function names are named with camelcase beginning with a capital
-    e.g. MultiWordFunction or MultiWordVariable
+Both variables and function names are named with camelCase
+    e.g. multiWordFunction or multiWordVariable
 
 Curly braces go on new lines :)
 No spaces inside parentheses for loops, conditionals, etc.
 
 
 "CameraFocus" is a tag only for camera focus points, anything with this tag must have a kinematic rigidbody and a 2d collider
+Animals will have the "Animal" tag
 
 Anything which the player can jump from must have the layer "Ground"
 
