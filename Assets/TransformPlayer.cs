@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TransformPlayer : MonoBehaviour
 {
-    public List<GameObject> animals;
+    public List<GameObject> animals; // will be updated externally as animals
+                                     // are unlocked
     private int curr_animal;
     public SmartCamera cam;
 
@@ -32,16 +33,12 @@ public class TransformPlayer : MonoBehaviour
 
         for ( int i = 0; i < animals.Count; i++ )
         {
-            if ( i == new_animal )
-            {
-            }
-            else
+            if (i != new_animal)
             {
                 animals[i].SetActive(false);
             }
         }
 
         curr_animal = new_animal;
-
     }
 }
