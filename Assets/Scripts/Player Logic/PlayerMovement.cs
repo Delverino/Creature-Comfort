@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("An audiosource with the clip for jumping loaded")]
     public AudioSource jump_sound;
 
+    public TransformPlayer manager;
 
     float base_gravity;
     private void Awake()
@@ -70,10 +71,55 @@ public class PlayerMovement : MonoBehaviour
         //Sets the horizontal velocity to the input times the speed
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
+        switch (manager.state)
+        {
+            case "grounded": // in coyote time
+                //body.gravityScale = base_gravity;
+                if (jump_is_buffered)
+                {
+                    jump_sound.Play();
+                    body.velocity = new Vector2(body.velocity.x, jump_impulse);
+                    coyote_end = 0;
+                    manager.jump_begin = Time.realtimeSinceStartup;
+                    jump_is_buffered = false;
+                    manager.state = "jumping";
+                }
+                break;
 
+            case "jumping":  // going upward
+                body.velocity = new Vector2(body.velocity.x, jump_impulse);
+                //body.gravityScale = base_gravity;
+                if (Input.GetAxis("Vertical") <= 0)
+                {
+                    manager.state = "falling";
+                } else if (Time.realtimeSinceStartup > manager.jump_begin + jump_time)
+                {
+                    manager.state = "floating";
+                }
+                break;
+
+            case "floating": // 0 y velocity (potentially gravity off)
+                //body.gravityScale = 0;
+                body.velocity = new Vector2(body.velocity.x, 0);
+                if (Input.GetAxis("Vertical") != 1 || Time.realtimeSinceStartup > manager.jump_begin + jump_time + hang_time)
+                {
+                    manager.state = "falling";
+                }
+                break;
+
+            case "falling":  // set in freefall
+                             //body.gravityScale = base_gravity;
+                if (Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < manager.jump_begin + jump_time + hang_time)
+                {
+                    manager.state = "floating";
+                }
+                body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
+                jump_end = 0;
+                break;
+        }
 
         //Jump logic!
-        if ( (jump_is_buffered /*|| Input.GetAxis("Vertical") == 1*/) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
+        /*if ( (jump_is_buffered ) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
         {
             jump_sound.Play();
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
@@ -81,9 +127,8 @@ public class PlayerMovement : MonoBehaviour
             jump_end = jump_time + Time.realtimeSinceStartup;
             jump_is_buffered = false;
 
-        } else if(Input.GetAxis("Vertical") > 0 && Time.realtimeSinceStartup < jump_end) //Keep jumping if they hold the key
+        } else if(Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < jump_end) //Keep jumping if they hold the key
         {
-
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
 
         } else if(Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < jump_end + hang_time) //Hang in the air during hang time
@@ -97,12 +142,13 @@ public class PlayerMovement : MonoBehaviour
             body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
             jump_end = 0;
 
-        }
+        }*/
     }
 
     //Begins Coyote time
     void beginCoyote()
     {
+        manager.state = "grounded";
         coyote_end = coyote_time + Time.realtimeSinceStartup;
     }
 

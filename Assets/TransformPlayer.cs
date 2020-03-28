@@ -10,9 +10,13 @@ public class TransformPlayer : MonoBehaviour
     public SmartCamera cam;
     public bool on;
 
+    public string state; //possibly should be enumerated, this should store "grounded", "jumping", "floating", "falling"
+    public float jump_begin; //store when the player last jumped
+
     // Start is called before the first frame update
     void Start()
     {
+        state = "falling";
         SetActiveAnimal(animals[0].transform.position, 0);
         on = true;
     }
@@ -33,6 +37,7 @@ public class TransformPlayer : MonoBehaviour
         {
             animals[new_animal].SetActive(true);
             animals[new_animal].transform.position = position;
+            animals[new_animal].GetComponent<Rigidbody2D>().velocity = animals[curr_animal].GetComponent<Rigidbody2D>().velocity;
             cam.Focus(animals[new_animal].transform);
 
             for (int i = 0; i < animals.Count; i++)
