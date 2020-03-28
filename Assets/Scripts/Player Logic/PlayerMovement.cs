@@ -43,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("An audiosource with the clip for jumping loaded")]
     public AudioSource jump_sound;
 
+
+    float base_gravity;
+    private void Awake()
+    {
+        base_gravity = body.gravityScale;
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -79,14 +86,14 @@ public class PlayerMovement : MonoBehaviour
 
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
 
-        } else if(Input.GetAxis("Vertical") > 0 && Time.realtimeSinceStartup < jump_end + hang_time) //Hang in the air during hang time
+        } else if(Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < jump_end + hang_time) //Hang in the air during hang time
         {
-
+            body.gravityScale = 0;
             body.velocity = new Vector2(body.velocity.x, 0);
 
         } else //Otherwise make sure no inputs are being counted and cut the velocitys
         {
-
+            body.gravityScale = base_gravity;
             body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
             jump_end = 0;
 

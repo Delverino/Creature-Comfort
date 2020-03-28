@@ -6,12 +6,17 @@ public class squash : MonoBehaviour
 {
     public Rigidbody2D body;
 
-    public Vector3 init_transform;
+    Vector3 init_transform;
     public Vector3 squish;
     public Vector3 stretch;
 
-    public float y_threshold;
-    public float change_threshold;
+    Vector3 actual_squish;
+    Vector3 actual_stretch;
+
+
+
+    float y_threshold = 1; 
+    float change_threshold = 10;
 
     //all in reference to just the y motion
     float velocity_diff = 0;
@@ -20,7 +25,15 @@ public class squash : MonoBehaviour
 
     public float elasticity;
 
-    public Vector3 target;
+    Vector3 target;
+
+    private void Awake()
+    {
+        init_transform = transform.localScale;
+        actual_squish = Vector3.Scale(squish, init_transform);
+        actual_stretch = Vector3.Scale(stretch, init_transform);
+
+    }
 
     private void FixedUpdate()
     {
@@ -30,10 +43,10 @@ public class squash : MonoBehaviour
 
         if(Mathf.Abs(curr_velocity) > y_threshold)
         {
-            target = stretch;
+            target = actual_stretch;
         } else if (velocity_diff > change_threshold)
         {
-            transform.localScale = squish;
+            transform.localScale = actual_squish;
         }
         else
         {
