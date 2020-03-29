@@ -35,6 +35,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.19063722
       objectReference: {fileID: 0}
+    - target: {fileID: 8512855174413269305, guid: 52a078129e81d1d4db59e8617cb07895,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8512855174413269306, guid: 52a078129e81d1d4db59e8617cb07895,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 8512855174413269310, guid: 52a078129e81d1d4db59e8617cb07895,
         type: 3}
       propertyPath: m_Name
-      value: SelectivePlatform
+      value: SelectivePlatform Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a078129e81d1d4db59e8617cb07895, type: 3}
