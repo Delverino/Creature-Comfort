@@ -21,7 +21,6 @@ public class AnimalPanel : MonoBehaviour
     // Functions to update whether or not the panel is showing + if the time is stopped
     void updatePanel() {
         isShowing = !isShowing;
-            
             if (isShowing) {
                 Time.timeScale = 0f;
             } else {
@@ -47,6 +46,16 @@ public class AnimalPanel : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2) && isShowing) 
         {
             tp.SetActiveAnimal(1);
+            updatePanel();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && isShowing) 
+        {
+            tp.SetActiveAnimal(2);
+            updatePanel();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4) && isShowing) 
+        {
+            tp.SetActiveAnimal(3);
             updatePanel();
         }
     }
