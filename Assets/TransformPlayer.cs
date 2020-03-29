@@ -16,27 +16,30 @@ public class TransformPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        curr_animal = 0;
+        SetActiveAnimal(0);
         state = "falling";
-        SetActiveAnimal(animals[0].transform.position, 0);
         on = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetActiveAnimal(animals[curr_animal].transform.position, (curr_animal + 1) % animals.Count);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     SetActiveAnimal((curr_animal + 1) % animals.Count);
+        // }
     }
 
     // returns previously active animal and sets new one
-    public void SetActiveAnimal(Vector3 position, int new_animal)
+    public void SetActiveAnimal(int new_animal)
     {
+        // If not in the middle of an animal puzzle
         if (on)
         {
             animals[new_animal].SetActive(true);
-            animals[new_animal].transform.position = position;
+            animals[new_animal].transform.position = animals[curr_animal].transform.position;
+
             animals[new_animal].GetComponent<Rigidbody2D>().velocity = animals[curr_animal].GetComponent<Rigidbody2D>().velocity;
             cam.Focus(animals[new_animal].transform);
 
