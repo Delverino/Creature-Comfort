@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CameraFocus
   - Animal
+  - Music
+  - Breakable
   layers:
   - Default
   - TransparentFX
