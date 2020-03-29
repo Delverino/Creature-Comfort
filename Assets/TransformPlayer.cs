@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class TransformPlayer : MonoBehaviour
 {
+    public static TransformPlayer Instance;
+
     public List<GameObject> animals; // will be updated externally as animals
                                      // are unlocked
-    private int curr_animal;
+    public int curr_animal;
     public SmartCamera cam;
     public bool on;
 
     public string state; //possibly should be enumerated, this should store "grounded", "jumping", "floating", "falling"
     public float jump_begin; //store when the player last jumped
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +32,10 @@ public class TransformPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     SetActiveAnimal((curr_animal + 1) % animals.Count);
-        // }
+        /*if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SetActiveAnimal((curr_animal + 1) % animals.Count);
+        }*/
     }
 
     // returns previously active animal and sets new one
