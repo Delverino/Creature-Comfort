@@ -14,7 +14,7 @@ public class SelectivePlatform : MonoBehaviour
     {
         coll = GetComponent<Collider2D>();
         sprite = GetComponent<SpriteRenderer>();
-        init_color = sprite.color;
+        init_color = TransformPlayer.Instance.animals[animal].GetComponentInChildren<SpriteRenderer>().color;
     }
 
     // Update is called once per frame

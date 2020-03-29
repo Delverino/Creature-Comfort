@@ -32,10 +32,10 @@ public class TransformPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             SetActiveAnimal((curr_animal + 1) % animals.Count);
-        }*/
+        }
     }
 
     // returns previously active animal and sets new one
