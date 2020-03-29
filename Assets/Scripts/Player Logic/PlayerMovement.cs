@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("An audiosource with the clip for jumping loaded")]
     public AudioSource jump_sound;
 
-    public TransformPlayer manager;
+    //public TransformPlayer manager;
 
     float base_gravity;
     private void Awake()
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         //Sets the horizontal velocity to the input times the speed
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        switch (manager.state)
+        switch (TransformPlayer.Instance.state)
         {
             case "grounded": // in coyote time
                 //body.gravityScale = base_gravity;
@@ -80,9 +80,9 @@ public class PlayerMovement : MonoBehaviour
                     jump_sound.Play();
                     body.velocity = new Vector2(body.velocity.x, jump_impulse);
                     coyote_end = 0;
-                    manager.jump_begin = Time.time;
+                    TransformPlayer.Instance.jump_begin = Time.time;
                     jump_is_buffered = false;
-                    manager.state = "jumping";
+                    TransformPlayer.Instance.state = "jumping";
                 }
                 break;
 
@@ -91,27 +91,27 @@ public class PlayerMovement : MonoBehaviour
                 //body.gravityScale = base_gravity;
                 if (Input.GetAxis("Vertical") <= 0)
                 {
-                    manager.state = "falling";
-                } else if (Time.time > manager.jump_begin + jump_time)
+                    TransformPlayer.Instance.state = "falling";
+                } else if (Time.time > TransformPlayer.Instance.jump_begin + jump_time)
                 {
-                    manager.state = "floating";
+                    TransformPlayer.Instance.state = "floating";
                 }
                 break;
 
             case "floating": // 0 y velocity (potentially gravity off)
                 //body.gravityScale = 0;
                 body.velocity = new Vector2(body.velocity.x, 0);
-                if (Input.GetAxis("Vertical") != 1 || Time.time > manager.jump_begin + jump_time + hang_time)
+                if (Input.GetAxis("Vertical") != 1 || Time.time > TransformPlayer.Instance.jump_begin + jump_time + hang_time)
                 {
-                    manager.state = "falling";
+                    TransformPlayer.Instance.state = "falling";
                 }
                 break;
 
             case "falling":  // set in freefall
                              //body.gravityScale = base_gravity;
-                if (Input.GetAxis("Vertical") == 1 && Time.time < manager.jump_begin + jump_time + hang_time)
+                if (Input.GetAxis("Vertical") == 1 && Time.time < TransformPlayer.Instance.jump_begin + jump_time + hang_time)
                 {
-                    manager.state = "floating";
+                    TransformPlayer.Instance.state = "floating";
                 }
                 body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
                 jump_end = 0;
@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
     //Begins Coyote time
     void beginCoyote()
     {
-        manager.state = "grounded";
+        TransformPlayer.Instance.state = "grounded";
         coyote_end = coyote_time + Time.time;
     }
 
