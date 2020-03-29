@@ -18,11 +18,9 @@ public class AnimalPanel : MonoBehaviour
         animalPanel.enabled = isShowing;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            isShowing = !isShowing;
+    // Functions to update whether or not the panel is showing + if the time is stopped
+    void updatePanel() {
+        isShowing = !isShowing;
             
             if (isShowing) {
                 Time.timeScale = 0f;
@@ -31,6 +29,25 @@ public class AnimalPanel : MonoBehaviour
             }
             
             animalPanel.enabled = isShowing;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            updatePanel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) && isShowing) 
+        {
+            tp.SetActiveAnimal(0);
+            updatePanel();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && isShowing) 
+        {
+            tp.SetActiveAnimal(1);
+            updatePanel();
         }
     }
 }
