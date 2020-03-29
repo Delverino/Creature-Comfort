@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
                     jump_sound.Play();
                     body.velocity = new Vector2(body.velocity.x, jump_impulse);
                     coyote_end = 0;
-                    manager.jump_begin = Time.realtimeSinceStartup;
+                    manager.jump_begin = Time.time;
                     jump_is_buffered = false;
                     manager.state = "jumping";
                 }
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetAxis("Vertical") <= 0)
                 {
                     manager.state = "falling";
-                } else if (Time.realtimeSinceStartup > manager.jump_begin + jump_time)
+                } else if (Time.time > manager.jump_begin + jump_time)
                 {
                     manager.state = "floating";
                 }
@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             case "floating": // 0 y velocity (potentially gravity off)
                 //body.gravityScale = 0;
                 body.velocity = new Vector2(body.velocity.x, 0);
-                if (Input.GetAxis("Vertical") != 1 || Time.realtimeSinceStartup > manager.jump_begin + jump_time + hang_time)
+                if (Input.GetAxis("Vertical") != 1 || Time.time > manager.jump_begin + jump_time + hang_time)
                 {
                     manager.state = "falling";
                 }
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 
             case "falling":  // set in freefall
                              //body.gravityScale = base_gravity;
-                if (Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < manager.jump_begin + jump_time + hang_time)
+                if (Input.GetAxis("Vertical") == 1 && Time.time < manager.jump_begin + jump_time + hang_time)
                 {
                     manager.state = "floating";
                 }
@@ -124,14 +124,14 @@ public class PlayerMovement : MonoBehaviour
             jump_sound.Play();
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
             coyote_end = 0;
-            jump_end = jump_time + Time.realtimeSinceStartup;
+            jump_end = jump_time + Time.time;
             jump_is_buffered = false;
 
-        } else if(Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < jump_end) //Keep jumping if they hold the key
+        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end) //Keep jumping if they hold the key
         {
             body.velocity = new Vector2(body.velocity.x, jump_impulse);
 
-        } else if(Input.GetAxis("Vertical") == 1 && Time.realtimeSinceStartup < jump_end + hang_time) //Hang in the air during hang time
+        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end + hang_time) //Hang in the air during hang time
         {
             body.gravityScale = 0;
             body.velocity = new Vector2(body.velocity.x, 0);
@@ -149,13 +149,13 @@ public class PlayerMovement : MonoBehaviour
     void beginCoyote()
     {
         manager.state = "grounded";
-        coyote_end = coyote_time + Time.realtimeSinceStartup;
+        coyote_end = coyote_time + Time.time;
     }
 
     //Checks if still within Coyote time
     bool isGrounded()
     {
-        return Time.realtimeSinceStartup < coyote_end;
+        return Time.time < coyote_end;
     }
 
     //Begins jump buffer
@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
     /*Checks if a jump is buffered
     bool jumpIsBuffered()
     {
-        return Time.realtimeSinceStartup < jump_expiration;
+        return Time.time < jump_expiration;
     }*/
 
     private void OnTriggerEnter2D(Collider2D collision) //TODO change to ontriggerstay2d, and implement a focus stack on camera
