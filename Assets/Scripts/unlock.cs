@@ -12,7 +12,7 @@ public class unlock : MonoBehaviour
         {
             tp.on = true;
             tp.animals.Add(collision.gameObject);
-            tp.SetActiveAnimal(transform.position, 0);
+            tp.SetActiveAnimal(0);
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             GetComponent<PlayerMovement>().enabled = true;
         }
