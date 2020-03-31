@@ -8,6 +8,7 @@ TagManager:
   - Animal
   - Music
   - Breakable
+  - Coins
   layers:
   - Default
   - TransparentFX
