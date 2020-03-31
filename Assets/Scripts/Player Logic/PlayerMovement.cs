@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Time during which the player can still jump after leaving the ground (named after Wil E Coyote)")]
     public float coyote_time = 0.1f;
 
-    float jump_end;
+    //float jump_end;
     [Tooltip("Time the player moves upwards while jumping")]
     public float jump_time;
     [Tooltip("Time the player floats at the top of the jump arc")]
@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
                     TransformPlayer.Instance.state = "floating";
                 }
                 body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
-                jump_end = 0;
+                //jump_end = 0;
                 break;
         }
 

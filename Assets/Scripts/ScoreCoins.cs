@@ -7,7 +7,7 @@ public class ScoreCoins : MonoBehaviour
 {	
 	public static ScoreCoins instance;
 	public Text text;
-	int score;
+	public int score;
     // Start is called before the first frame update
     void Start()
     {

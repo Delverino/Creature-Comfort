@@ -13,8 +13,10 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            ScoreCoins.instance.UpdateScore(decr_coin);
-            TriggerDialogue();
+        	if(ScoreCoins.instance.score > 0){
+            	ScoreCoins.instance.UpdateScore(decr_coin);
+            	TriggerDialogue();
+        	}
         }
     }
 
