@@ -13,3 +13,4 @@ Animals will have the "Animal" tag
 
 Anything which the player can jump from must have the layer "Ground"
 
+When adding the AnimalPanel prefab into a new scene, the OnClick for each button must be set individually to the TransformationManager, and then calling the SelectActiveAnimal method with the correct integer for that button
