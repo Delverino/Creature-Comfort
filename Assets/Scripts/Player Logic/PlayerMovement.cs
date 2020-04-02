@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
             case "jumping":  // going upward
                 body.velocity = new Vector2(body.velocity.x, jump_impulse);
                 //body.gravityScale = base_gravity;
+                jump_is_buffered = false;
                 if (Input.GetAxis("Vertical") <= 0)
                 {
                     TransformPlayer.Instance.state = "falling";
