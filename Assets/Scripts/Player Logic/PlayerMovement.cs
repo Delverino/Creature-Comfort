@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     [Tooltip("Speed the player travels upwards while jumping")]
     public float jump_impulse;
     [Tooltip("Horizontal Speed")]
@@ -118,6 +120,10 @@ public class PlayerMovement : MonoBehaviour
                 //jump_end = 0;
                 break;
         }
+
+    void OnDust(){
+        dust.Play();
+    }
 
         //Jump logic!
         /*if ( (jump_is_buffered ) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
