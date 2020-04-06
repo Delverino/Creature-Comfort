@@ -7,16 +7,16 @@ public class DialogueManager : MonoBehaviour
 {
     public Canvas canvas;
     
-    public Text nameText;
+    // public Text nameText;
     public Text dialogueText;
 
-    private Queue<string> names;
+    // private Queue<string> names;
     private Queue<string> sentences;
     
     // Start is called before the first frame update
     void Start()
     {
-        names = new Queue<string>();
+        // names = new Queue<string>();
         sentences = new Queue<string>();
         canvas.GetComponent<Canvas> ().enabled = false;
     }
@@ -26,17 +26,17 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Starting dialogue");
         canvas.GetComponent<Canvas> ().enabled = true;
         
-        names.Clear();
+        // names.Clear();
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-        foreach(string name in dialogue.names)
-        {
-            names.Enqueue(name);
-        }
+        // foreach(string name in dialogue.names)
+        // {
+        //     names.Enqueue(name);
+        // }
 
         DisplayNextSentence();
     }
@@ -53,8 +53,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
 
-        string name = names.Dequeue();
-        nameText.text = name;
+        // string name = names.Dequeue();
+        // nameText.text = name;
     }
 
     IEnumerator TypeSentence(string sentence)
