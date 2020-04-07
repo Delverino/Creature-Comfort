@@ -21,11 +21,11 @@ public class AnimalPanel : MonoBehaviour
     // Functions to update whether or not the panel is showing + if the time is stopped
     void updatePanel() {
         isShowing = !isShowing;
-            if (isShowing) {
-                Time.timeScale = 0f;
-            } else {
-                Time.timeScale = 1f;
-            }
+            // if (isShowing) {
+            //     Time.timeScale = 0f;
+            // } else {
+            //     Time.timeScale = 1f;
+            // }
             
             animalPanel.enabled = isShowing;
     }
@@ -38,30 +38,34 @@ public class AnimalPanel : MonoBehaviour
             updatePanel();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && isShowing) 
+        var key = Input.inputString;
+
+
+
+        if (key == "1") 
         {
             tp.SetActiveAnimal(0);
-            updatePanel();
+            // updatePanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && isShowing) 
+        if (Input.GetKeyDown(KeyCode.Alpha2)) 
         {
             tp.SetActiveAnimal(1);
-            updatePanel();
+            // updatePanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && isShowing) 
+        if (Input.GetKeyDown(KeyCode.Alpha3)) 
         {
             tp.SetActiveAnimal(2);
-            updatePanel();
+            // updatePanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && isShowing) 
+        if (Input.GetKeyDown(KeyCode.Alpha4)) 
         {
             tp.SetActiveAnimal(3);
-            updatePanel();
+            // updatePanel();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5) && isShowing) 
+        if (Input.GetKeyDown(KeyCode.Alpha5)) 
         {
             tp.SetActiveAnimal(4);
-            updatePanel();
+            // updatePanel();
         }
     }
 }
