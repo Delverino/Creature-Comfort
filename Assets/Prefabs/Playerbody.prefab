@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5993a4535d09a9544bbf2115cf63fe0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dust: {fileID: 5915635467091229341, guid: 42195ae20d07e71448899b4acc61521a, type: 3}
   jump_impulse: 15
   speed: 8
   body: {fileID: 4540737328117837254}
@@ -403,9 +402,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 4540737328117837254}
+  init_transform: {x: 1, y: 1, z: 1}
   squish: {x: 1.4, y: 0.4, z: 1}
   stretch: {x: 0.9, y: 1.1, z: 1}
+  y_threshold: 1
+  change_threshold: 10
   elasticity: 0.2
+  target: {x: 1, y: 1, z: 1}
 --- !u!1001 &6506897793840468941
 PrefabInstance:
   m_ObjectHideFlags: 0

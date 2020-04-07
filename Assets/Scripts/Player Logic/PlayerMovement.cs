@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject dust;
+    public ParticleSystem dust;
 
     [Tooltip("Speed the player travels upwards while jumping")]
     public float jump_impulse;
@@ -80,7 +80,6 @@ public class PlayerMovement : MonoBehaviour
                 if (jump_is_buffered)
                 {
                     jump_sound.Play();
-                    OnDust();
                     body.velocity = new Vector2(body.velocity.x, jump_impulse);
                     coyote_end = 0;
                     TransformPlayer.Instance.jump_begin = Time.time;
@@ -122,12 +121,35 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-
+    void OnDust(){
+        dust.Play();
     }
-    void OnDust()
-    {
-        Instantiate(dust, transform);
-        //dust.GetComponent<ParticleSystem>().Play();
+
+        //Jump logic!
+        /*if ( (jump_is_buffered ) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
+        {
+            jump_sound.Play();
+            body.velocity = new Vector2(body.velocity.x, jump_impulse);
+            coyote_end = 0;
+            jump_end = jump_time + Time.time;
+            jump_is_buffered = false;
+
+        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end) //Keep jumping if they hold the key
+        {
+            body.velocity = new Vector2(body.velocity.x, jump_impulse);
+
+        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end + hang_time) //Hang in the air during hang time
+        {
+            body.gravityScale = 0;
+            body.velocity = new Vector2(body.velocity.x, 0);
+
+        } else //Otherwise make sure no inputs are being counted and cut the velocitys
+        {
+            body.gravityScale = base_gravity;
+            body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
+            jump_end = 0;
+
+        }*/
     }
 
     //Begins Coyote time
@@ -152,6 +174,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    /*Checks if a jump is buffered
+    bool jumpIsBuffered()
+    {
+        return Time.time < jump_expiration;
+    }*/
+
     private void OnTriggerEnter2D(Collider2D other)
     {
     	if (other.gameObject.CompareTag("CameraFocus"))
@@ -166,14 +194,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Cam.RemoveView(collision.gameObject.transform);
             Debug.Log(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.relativeVelocity.sqrMagnitude > 400)
-        {
-            OnDust();
         }
     }
 }
