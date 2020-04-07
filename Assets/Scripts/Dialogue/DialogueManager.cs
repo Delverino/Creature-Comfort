@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public Canvas[] dialogueCanvases; // all speech bubbles in scene
-    // private Text dialogueText; // text to print in one bubble
+    private Text dialogueText; // text to print in one bubble
 
     private Queue<string> sentences; // all sentences in THIS dialogue
-    // private Queue<Canvas> bubbles; // all speech bubbles in THIS dialogue
-    private Queue<GameObject> bubbles;
+    private Queue<Canvas> bubbles; // all speech bubbles in THIS dialogue
     private bool dialogueStarted; // if currently engaged in dialogue
 
     public TransformPlayer tp;
@@ -19,8 +18,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
-        // bubbles = new Queue<Canvas>();
-        bubbles = new Queue<GameObject>();
+        bubbles = new Queue<Canvas>();
         dialogueStarted = false;
         shutBubbles();
     }
@@ -45,8 +43,7 @@ public class DialogueManager : MonoBehaviour
             {
                 sentences.Enqueue(sentence);
             }
-            // foreach (Canvas canvas in dialogue.canvases)
-            foreach(GameObject canvas in dialogue.canvases)
+            foreach(Canvas canvas in dialogue.canvases)
             {
                 bubbles.Enqueue(canvas);
             }
@@ -71,8 +68,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // Canvas bubble = bubbles.Dequeue();
-        GameObject bubble = bubbles.Dequeue();
+        Canvas bubble = bubbles.Dequeue();
         bubble.GetComponent<Canvas>().enabled = true;
         Debug.Log(bubble);
 
@@ -81,17 +77,13 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence, bubble));
     }
 
-    // IEnumerator TypeSentence(string sentence, Canvas bubble)
-    IEnumerator TypeSentence(string sentence, GameObject bubble)
+    IEnumerator TypeSentence(string sentence, Canvas bubble)
     {
-        //dialogueText.text = "";
-        GameObject hi;
-        Text text = hi.GetComponent<UnityEngine.UI.Text>().text;
-        bubble.GetComponent<Text>().text = "";
+        bubble.GetComponentInChildren<Text>().text = "";
 
         foreach(char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            bubble.GetComponentInChildren<Text>().text += letter;
             yield return null;
         }
     }

@@ -8,8 +8,7 @@ public class Dialogue
         // NOTE: size of canvases and sentences MUST be the same!!!
         // allows for multiple characters within dialogue
         
-        // public Canvas[] canvases;
-        public GameObject[] canvases;
+        public Canvas[] canvases;
         [TextArea(3, 10)]
         public string[] sentences;
 }
