@@ -70,4 +70,5 @@ public class AnimalPanel : MonoBehaviour
             // updatePanel();
         }
     }
+    }
 }
