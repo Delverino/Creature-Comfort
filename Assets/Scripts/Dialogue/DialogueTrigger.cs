@@ -14,11 +14,15 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
         	// update coin values
-            if (ScoreCoins.instance.score > 0){
-            	// TODO: issue message if not enough coins
+            if (ScoreCoins.instance.score > 0)
+            {
                 ScoreCoins.instance.UpdateScore(decr_coin);
             	TriggerDialogue();
         	}
+            else 
+            {
+                // TODO: issue message if not enough coins
+            }
         }
     }
 

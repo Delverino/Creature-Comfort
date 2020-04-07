@@ -5,26 +5,22 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    // public Canvas canvas;
-    // public Text nameText;
-    public Text dialogueText;
+    public Canvas[] dialogueCanvases; // all speech bubbles in scene
+    private Text dialogueText; // text to print in one bubble
 
-    // private Queue<string> names;
-    private Queue<string> sentences;
-    private Queue<Canvas> bubbles;
-    private bool dialogueStarted;
+    private Queue<string> sentences; // all sentences in THIS dialogue
+    private Queue<Canvas> bubbles; // all speech bubbles in THIS dialogue
+    private bool dialogueStarted; // if currently engaged in dialogue
 
     public TransformPlayer tp;
-    public DialogueMaster master;
     
     // Start is called before the first frame update
     void Start()
     {
-        // names = new Queue<string>();
         sentences = new Queue<string>();
         bubbles = new Queue<Canvas>();
-        // canvas.GetComponent<Canvas> ().enabled = false;
         dialogueStarted = false;
+        shutBubbles();
     }
 
     void Update()
@@ -38,30 +34,22 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("Starting dialogue");
         Time.timeScale = 0f;
-        // TODO: make this happen for each canvas each time
-        //canvas.GetComponent<Canvas>().enabled = true; 
         
         // prevents restarting dialogue in the middle
         if (!dialogueStarted) {
-            // names.Clear();
             sentences.Clear();
 
             foreach (string sentence in dialogue.sentences)
             {
                 sentences.Enqueue(sentence);
             }
-            // foreach(string name in dialogue.names)
-            // {
-            //     names.Enqueue(name);
-            // }
-            foreach (Canvas canvas in dialogue.canvases)
+            foreach(Canvas canvas in dialogue.canvases)
             {
                 bubbles.Enqueue(canvas);
             }
 
             dialogueStarted = true;
             tp.on = false;
-            Debug.Log(tp.on);
 
             DisplayNextSentence();
         }
@@ -69,15 +57,13 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        master.shutBubbles();
+        shutBubbles();
 
         if (sentences.Count == 0)
         {
-            master.shutBubbles();
-            // canvas.GetComponent<Canvas>().enabled = false;
+            shutBubbles();
             dialogueStarted = false;
             tp.on = true;
-            Debug.Log(tp.on);
             Time.timeScale = 1f;
             return;
         }
@@ -88,20 +74,25 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
-
-        // string name = names.Dequeue();
-        // nameText.text = name;
+        StartCoroutine(TypeSentence(sentence, bubble));
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence, Canvas bubble)
     {
-        dialogueText.text = "";
+        bubble.GetComponentInChildren<Text>().text = "";
 
         foreach(char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;
+            bubble.GetComponentInChildren<Text>().text += letter;
             yield return null;
+        }
+    }
+
+    void shutBubbles()
+    {
+        foreach (Canvas canvas in dialogueCanvases)
+        {
+            canvas.GetComponent<Canvas>().enabled = false;
         }
     }
 }

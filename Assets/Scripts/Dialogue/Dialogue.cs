@@ -5,11 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {   
-        // NOTE: size of names and sentences MUST be the same!!!
+        // NOTE: size of canvases and sentences MUST be the same!!!
         // allows for multiple characters within dialogue
-        // TODO: this is kinda hackey... find a more modular way?
-
-        // public string[] names;
         
         public Canvas[] canvases;
         [TextArea(3, 10)]

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public ParticleSystem dust;
+    public GameObject dust;
 
     [Tooltip("Speed the player travels upwards while jumping")]
     public float jump_impulse;
@@ -80,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
                 if (jump_is_buffered)
                 {
                     jump_sound.Play();
+                    OnDust();
                     body.velocity = new Vector2(body.velocity.x, jump_impulse);
                     coyote_end = 0;
                     TransformPlayer.Instance.jump_begin = Time.time;
@@ -121,35 +123,21 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
-    void OnDust(){
-        dust.Play();
     }
 
-        //Jump logic!
-        /*if ( (jump_is_buffered ) && isGrounded()) //Begin Jump when it hits the ground if the player is holding jump or had a jump buffered
-        {
-            jump_sound.Play();
-            body.velocity = new Vector2(body.velocity.x, jump_impulse);
-            coyote_end = 0;
-            jump_end = jump_time + Time.time;
-            jump_is_buffered = false;
+    void OnDust()
+    {
+        Instantiate(dust, transform);
+        dust.GetComponent<ParticleSystem>().Play();
+        //return dust.GetComponent<ParticleSystem>();
+    }
 
-        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end) //Keep jumping if they hold the key
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.relativeVelocity.sqrMagnitude > 400)
         {
-            body.velocity = new Vector2(body.velocity.x, jump_impulse);
-
-        } else if(Input.GetAxis("Vertical") == 1 && Time.time < jump_end + hang_time) //Hang in the air during hang time
-        {
-            body.gravityScale = 0;
-            body.velocity = new Vector2(body.velocity.x, 0);
-
-        } else //Otherwise make sure no inputs are being counted and cut the velocitys
-        {
-            body.gravityScale = base_gravity;
-            body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
-            jump_end = 0;
-
-        }*/
+            OnDust();
+        }
     }
 
     //Begins Coyote time
