@@ -33,10 +33,12 @@ public class AnimalPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (tp.on) 
         {
-            updatePanel();
-        }
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
+                updatePanel();
+            }
 
         var key = Input.inputString;
 
