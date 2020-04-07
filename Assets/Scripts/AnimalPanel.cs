@@ -33,35 +33,38 @@ public class AnimalPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (tp.on) 
         {
-            updatePanel();
-        }
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
+                updatePanel();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && isShowing) 
-        {
-            tp.SetActiveAnimal(0);
-            updatePanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && isShowing) 
-        {
-            tp.SetActiveAnimal(1);
-            updatePanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && isShowing) 
-        {
-            tp.SetActiveAnimal(2);
-            updatePanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && isShowing) 
-        {
-            tp.SetActiveAnimal(3);
-            updatePanel();
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5) && isShowing) 
-        {
-            tp.SetActiveAnimal(4);
-            updatePanel();
+            if (Input.GetKeyDown(KeyCode.Alpha1) && isShowing) 
+            {
+                tp.SetActiveAnimal(0);
+                updatePanel();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2) && isShowing) 
+            {
+                tp.SetActiveAnimal(1);
+                updatePanel();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3) && isShowing) 
+            {
+                tp.SetActiveAnimal(2);
+                updatePanel();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha4) && isShowing) 
+            {
+                tp.SetActiveAnimal(3);
+                updatePanel();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha5) && isShowing) 
+            {
+                tp.SetActiveAnimal(4);
+                updatePanel();
+            }
         }
     }
 }

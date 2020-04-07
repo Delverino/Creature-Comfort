@@ -26,7 +26,5 @@ public class DialogueTrigger : MonoBehaviour
     {
         Debug.Log("Triggering dialogue");
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        // TODO: freeze Mo
-        // TODO: turn inventory off
     }
 }

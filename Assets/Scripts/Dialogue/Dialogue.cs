@@ -10,7 +10,8 @@ public class Dialogue
         // TODO: this is kinda hackey... find a more modular way?
 
         // public string[] names;
-        [TextArea(3, 10)]
+        
         public Canvas[] canvases;
+        [TextArea(3, 10)]
         public string[] sentences;
 }
