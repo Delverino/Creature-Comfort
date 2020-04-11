@@ -489,6 +489,16 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848317, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: squish.x
@@ -513,6 +523,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.7169812
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 936e19244910cc64fab221fd64435d30,
+        type: 3}
+    - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4540737328117837249, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}

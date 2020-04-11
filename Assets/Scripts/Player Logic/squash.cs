@@ -27,11 +27,14 @@ public class squash : MonoBehaviour
 
     Vector3 target;
 
+    SpriteRenderer sprite;
+
     private void Awake()
     {
         init_transform = transform.localScale;
         actual_squish = Vector3.Scale(squish, init_transform);
         actual_stretch = Vector3.Scale(stretch, init_transform);
+        sprite = GetComponent<SpriteRenderer>();
 
     }
 
@@ -40,6 +43,14 @@ public class squash : MonoBehaviour
         curr_velocity = body.velocity.y;
         velocity_diff = curr_velocity - last_velocity;
         last_velocity = curr_velocity;
+
+        if(body.velocity.x < 0)
+        {
+            sprite.flipX = true;
+        } else if(body.velocity.x > 0)
+        {
+            sprite.flipX = false;
+        }
 
         if(Mathf.Abs(curr_velocity) > y_threshold)
         {
