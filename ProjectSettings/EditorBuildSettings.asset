@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 17a3dc82d87fb45e2b2038bde3d71b1c
   - enabled: 0
-    path: Assets/Scenes/Background.unity
+    path: 
     guid: e3d1e6cacaccbeb42a4fcef303bfd1b4
   - enabled: 1
     path: Assets/Scenes/main_menu.unity
     guid: 2da239040000ac147b2d647d979b61b8
+  - enabled: 1
+    path: Assets/Scenes/MoTutorial.unity
+    guid: 22c66de0225be446688e30ac854aa3da
   - enabled: 1
     path: Assets/Scenes/Complex Level.unity
     guid: 9bfdba57ca1c9b44cbe9a1f18ab54d4c
