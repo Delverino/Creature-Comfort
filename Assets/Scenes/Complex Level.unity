@@ -33577,8 +33577,25 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 848102193}
+    - target: {fileID: 8577848019087800758, guid: 3ec61959e5cf646be9797b0884d8510e,
+        type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 2093902060188883367}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ec61959e5cf646be9797b0884d8510e, type: 3}
+--- !u!114 &2093902060188883367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2093902060188883366}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715a652c6177441d4b2d6aab81db99a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3007950992246436658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33591,6 +33608,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 848102193}
+    - target: {fileID: 3007950993499088760, guid: 195e2750398d54b7b9cb15e26efaeb7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.700012
+      objectReference: {fileID: 0}
     - target: {fileID: 3007950993804251605, guid: 195e2750398d54b7b9cb15e26efaeb7c,
         type: 3}
       propertyPath: m_Name
