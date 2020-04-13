@@ -9,7 +9,7 @@ public class door : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.UpArrow))
+        if (collision.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
             SceneManager.LoadScene(destinationScene);
         }
