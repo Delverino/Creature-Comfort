@@ -9,6 +9,7 @@ TagManager:
   - Music
   - Breakable
   - Coins
+  - Banana
   layers:
   - Default
   - TransparentFX

@@ -63,6 +63,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5405e4b43588a1b4c85bac6a01bbd80b, type: 3}
   - {fileID: 8300000, guid: 1537e04782a8693489d49dba42e803b2, type: 3}
   - {fileID: 8300000, guid: fbad99cecdf44664e993eedc58a83b82, type: 3}
+  - {fileID: 8300000, guid: 5e5ecb8dfca03ed4189b920f6136b349, type: 3}
   speaker: {fileID: 8821393781241107885}
   curr_animal: 0
   cam: {fileID: 0}
