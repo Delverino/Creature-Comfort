@@ -14,8 +14,11 @@ public class clickSource : MonoBehaviour
         click = this;
     }
 
-    void play()
+    public void play()
     {
-        clickBox.Play();
+        if (!clickBox.isPlaying)
+        {
+            clickBox.Play();
+        }
     }
 }

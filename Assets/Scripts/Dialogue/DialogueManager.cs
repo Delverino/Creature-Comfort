@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (dialogueStarted && Input.anyKeyDown) {
             DisplayNextSentence();
+            clickSource.click.play();
         }
     }
 
