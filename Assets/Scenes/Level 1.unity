@@ -1492,18 +1492,24 @@ PrefabInstance:
     - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.25882354
+      value: 0.7830189
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.30588236
+      value: 0.40258992
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.65882355
+      value: 0.40258992
       objectReference: {fileID: 0}
+    - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1936393797605474441, guid: f41fb5c8ca2196a45bf3b07b6625624e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
 --- !u!1 &7104066302269397590
@@ -68416,6 +68422,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: door
       objectReference: {fileID: 0}
+    - target: {fileID: 7601473936359581660, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: destinationScene
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7601473936359581662, guid: d481ea71ac2bb6048a43912add0feb40,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68610,6 +68621,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.19607843
       objectReference: {fileID: 0}
+    - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 228d0a16b598a594db28f49d0f956afd,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
 --- !u!4 &7694715284953170404 stripped
