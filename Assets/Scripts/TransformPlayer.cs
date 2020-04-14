@@ -8,6 +8,10 @@ public class TransformPlayer : MonoBehaviour
 
     public List<GameObject> animals; // will be updated externally as animals
                                      // are unlocked
+    public List<AudioClip> sounds;
+    public AudioSource speaker;
+
+
     public int curr_animal;
     public SmartCamera cam;
     public bool on;
@@ -44,6 +48,14 @@ public class TransformPlayer : MonoBehaviour
         // If not in the middle of an animal puzzle
         if (on)
         {
+            if (sounds.Count <= new_animal)
+            {
+                Debug.Log("Error: Add more sounds to the list on " + gameObject);
+            } else if(Time.timeSinceLevelLoad > 0.1f)
+            {
+                speaker.clip = sounds[new_animal];
+                speaker.Play();
+            }
             animals[new_animal].SetActive(true);
             animals[new_animal].transform.position = animals[curr_animal].transform.position;
 
