@@ -28808,9 +28808,11 @@ MonoBehaviour:
   - {fileID: 7694715285657888490}
   - {fileID: 6182015407506199600}
   - {fileID: 6182015407793919852}
+  sounds: []
+  speaker: {fileID: 0}
   curr_animal: 0
   cam: {fileID: 1262565370}
-  on: 0
+  on: 1
   state: 
   jump_begin: 0
 --- !u!1 &7694715286500564935
