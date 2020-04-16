@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject dust;
 
+    public bool jumpOverride;
+
     [Tooltip("Speed the player travels upwards while jumping")]
     public float jump_impulse;
     [Tooltip("Horizontal Speed")]
@@ -68,6 +70,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void jump()
+    {
+            jump_sound.Play();
+            OnDust();
+            body.velocity = new Vector2(body.velocity.x, jump_impulse);
+            coyote_end = 0;
+            TransformPlayer.Instance.jump_begin = Time.time;
+            jump_is_buffered = false;
+            TransformPlayer.Instance.state = "jumping";
+    }
+
     private void FixedUpdate()
     {
         //Sets the horizontal velocity to the input times the speed
@@ -79,18 +92,16 @@ public class PlayerMovement : MonoBehaviour
                 //body.gravityScale = base_gravity;
                 if (jump_is_buffered)
                 {
-                    jump_sound.Play();
-                    OnDust();
-                    body.velocity = new Vector2(body.velocity.x, jump_impulse);
-                    coyote_end = 0;
-                    TransformPlayer.Instance.jump_begin = Time.time;
-                    jump_is_buffered = false;
-                    TransformPlayer.Instance.state = "jumping";
+                    jump();
                 }
                 break;
 
             case "jumping":  // going upward
                 body.velocity = new Vector2(body.velocity.x, jump_impulse);
+                if (jumpOverride)
+                {
+                    jump();
+                }
                 //body.gravityScale = base_gravity;
                 jump_is_buffered = false;
                 if (Input.GetAxis("Vertical") <= 0)
@@ -121,8 +132,6 @@ public class PlayerMovement : MonoBehaviour
                 //jump_end = 0;
                 break;
         }
-
-
     }
     void OnDust()
     {

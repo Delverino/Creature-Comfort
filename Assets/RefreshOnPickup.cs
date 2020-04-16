@@ -24,7 +24,7 @@ public class RefreshOnPickup : MonoBehaviour
         if (collision.gameObject.CompareTag(refresh))
         {
             tp.state = "grounded";
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Refreshable>().eat();
         }
     }
 }
