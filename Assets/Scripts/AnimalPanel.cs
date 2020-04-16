@@ -16,7 +16,8 @@ public class AnimalPanel : MonoBehaviour
 
     public Sprite highlightedSlot;
     public Sprite unhighlightedSlot;
-    
+
+    private int numAnimalsUnlocked;
 
     // Initially sets highlighted animalPanel to Mo--this can be
     // changed/done better
@@ -25,15 +26,19 @@ public class AnimalPanel : MonoBehaviour
     {
         animalPanel = GetComponent<Canvas> ();
         updatePanel(1);
+        numAnimalsUnlocked = tp.animals.Count;
+
     }
 
-    // Mainly just annoying switch code: switches which slot is highlighted
-    // based on which animal is selected
+    // Updates which slot is highlighted based on which animal is selected
     // Also super unoptimized code--there's definitely a better way to do this
     void updatePanel(int numAnimal) {
+        
+
         switch (numAnimal)
         {
             case 1:
+                
                 slot1.GetComponent<Image>().sprite = highlightedSlot;
                 slot2.GetComponent<Image>().sprite = unhighlightedSlot;
                 slot3.GetComponent<Image>().sprite = unhighlightedSlot;
@@ -76,6 +81,10 @@ public class AnimalPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Not sure if this is being called too often/if it could slow down
+        // the game
+        numAnimalsUnlocked = tp.animals.Count;
+
         if (tp.on) 
         {
         var key = Input.inputString;
@@ -86,22 +95,22 @@ public class AnimalPanel : MonoBehaviour
             slot1.GetComponent<Image>().sprite = highlightedSlot;
             updatePanel(1);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) 
+        if (Input.GetKeyDown(KeyCode.Alpha2) && 2 <= numAnimalsUnlocked) 
         {
             tp.SetActiveAnimal(1);
             updatePanel(2);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) 
+        if (Input.GetKeyDown(KeyCode.Alpha3) && 3 <= numAnimalsUnlocked) 
         {
             tp.SetActiveAnimal(2);
             updatePanel(3);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) 
+        if (Input.GetKeyDown(KeyCode.Alpha4) && 4 <= numAnimalsUnlocked) 
         {
             tp.SetActiveAnimal(3);
             updatePanel(4);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha5)) 
+        if (Input.GetKeyDown(KeyCode.Alpha5) && 5 <= numAnimalsUnlocked) 
         {
             tp.SetActiveAnimal(4);
             updatePanel(5);
