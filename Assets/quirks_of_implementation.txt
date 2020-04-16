@@ -1,3 +1,16 @@
+-- TO MAKE A LEVEL --
+
+- Drag BigPrefab into scene
+- If making tutorial, drag TutorialPrefab into scene
+- Specify animals unlocked (TODO)
+- Drag grid into scene
+- Unpack grid completely
+
+
+
+----------
+
+
 Oftentimes in unity a solution will require certain standards to be kept up among other code for it to function properly.
 This is documentation of those standards.
 
