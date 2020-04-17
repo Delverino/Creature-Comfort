@@ -178,6 +178,11 @@ PrefabInstance:
       propertyPath: tp
       value: 
       objectReference: {fileID: 7694715286153661793}
+    - target: {fileID: 4694281221329147477, guid: d2ba3ebc6270f45abb8cea0612d90363,
+        type: 3}
+      propertyPath: m_Name
+      value: MonkeyPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 4694281221808637154, guid: d2ba3ebc6270f45abb8cea0612d90363,
         type: 3}
       propertyPath: m_Name
@@ -319,6 +324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elephant
       objectReference: {fileID: 0}
+    - target: {fileID: 7407726598113653682, guid: 0e26e075ffd594ab896e94475a86a302,
+        type: 3}
+      propertyPath: m_Name
+      value: ElephantPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e26e075ffd594ab896e94475a86a302, type: 3}
 --- !u!1 &6182015407408874950 stripped
@@ -400,6 +410,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 286817327524258207, guid: f160b035453e94ec08122738297dcb23,
+        type: 3}
+      propertyPath: m_Name
+      value: PufferfishPlayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f160b035453e94ec08122738297dcb23, type: 3}
 --- !u!1 &6182015406487688480 stripped
@@ -421,6 +436,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7694715286153661794}
     m_Modifications:
+    - target: {fileID: 801523789940806249, guid: 74a153dd72a8943b7a48c050c889bce2,
+        type: 3}
+      propertyPath: m_Name
+      value: KangarooPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 801523790149239002, guid: 74a153dd72a8943b7a48c050c889bce2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,6 +522,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7694715286153661794}
     m_Modifications:
+    - target: {fileID: 788214771766887362, guid: c49513fea7ea14f599529d157b60a3b7,
+        type: 3}
+      propertyPath: m_Name
+      value: MoPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 788214772092703089, guid: c49513fea7ea14f599529d157b60a3b7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -588,6 +613,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7694715286153661794}
     m_Modifications:
+    - target: {fileID: 4590273431680283872, guid: 89f872949b6f841e89fc65e613e02c3c,
+        type: 3}
+      propertyPath: m_Name
+      value: MousePlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 4590273432022410835, guid: 89f872949b6f841e89fc65e613e02c3c,
         type: 3}
       propertyPath: m_LocalPosition.x
