@@ -47,6 +47,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9201624542774651299, guid: c426def25ffe2414ab36f916821c7f46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9201624542774651310, guid: c426def25ffe2414ab36f916821c7f46,
         type: 3}
       propertyPath: m_Camera
@@ -229,7 +234,7 @@ PrefabInstance:
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Name
-      value: Mo
+      value: Mo Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
