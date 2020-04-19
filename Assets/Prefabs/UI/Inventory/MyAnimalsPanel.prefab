@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 5777020753581448129}
   - component: {fileID: 5777020753581448157}
   m_Layer: 5
-  m_Name: MyAnimalsPanel 1
+  m_Name: MyAnimalsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalPanel: {fileID: 5777020753581448159}
   tp: {fileID: 0}
+  slotsParent: {fileID: 5777020752739710607}
   slot1: {fileID: 5777020751613817923}
   slot2: {fileID: 2761655015234187264}
   slot3: {fileID: 1347127848687264450}
@@ -478,6 +479,7 @@ MonoBehaviour:
   slot5: {fileID: 5765188384991711020}
   highlightedSlot: {fileID: 21300000, guid: 0b16c304b8d974baabf47562b33feb13, type: 3}
   unhighlightedSlot: {fileID: 21300000, guid: 5fdd1bebf6e1642d596ac713016998cf, type: 3}
+  numAnimals: 0
 --- !u!1 &5777020753718934044
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MoSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8538621890688775543, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
@@ -695,6 +702,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 37ed6dfe86e4744dfa5de72d22629bf2,
         type: 3}
+    - target: {fileID: 8538621891201069395, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_Name
+      value: MoButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8538621891201069397, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -771,7 +783,12 @@ PrefabInstance:
     - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_Name
-      value: InventorySlot (4)
+      value: PufferfishSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8538621890688775543, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
@@ -893,6 +910,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.7176471
       objectReference: {fileID: 0}
+    - target: {fileID: 8538621891201069395, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_Name
+      value: PufferfishButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8538621891201069397, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -959,6 +981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KangarooSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8538621890688775543, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
@@ -1106,6 +1133,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8c04a56c971944fd0af067750e01b53f,
         type: 3}
+    - target: {fileID: 8538621891201069395, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_Name
+      value: KangarooButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8538621891201069396, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1192,7 +1224,12 @@ PrefabInstance:
     - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_Name
-      value: InventorySlot (2)
+      value: MouseSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8538621890688775543, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
@@ -1314,6 +1351,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.65882355
       objectReference: {fileID: 0}
+    - target: {fileID: 8538621891201069395, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_Name
+      value: MouseButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8538621891201069397, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1379,7 +1421,12 @@ PrefabInstance:
     - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
       propertyPath: m_Name
-      value: InventorySlot (3)
+      value: ElephantSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621890688775542, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_TagString
+      value: Slot
       objectReference: {fileID: 0}
     - target: {fileID: 8538621890688775543, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
@@ -1500,6 +1547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.58495414
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538621891201069395, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
+        type: 3}
+      propertyPath: m_Name
+      value: ElephantButton
       objectReference: {fileID: 0}
     - target: {fileID: 8538621891201069397, guid: ceae40b59b5f64e53b3fc2a1989d4f46,
         type: 3}
