@@ -5,10 +5,14 @@ using UnityEngine;
 public class DialogueAreaCheck : MonoBehaviour
 {
     public DialogueTrigger trigger;
+    public bool triggerByPlayer;
+    public bool triggerByAnimal;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !trigger.alreadyTriggered)
+        if (((triggerByPlayer && collision.gameObject.tag == "Player") 
+              || (triggerByAnimal && collision.gameObject.tag == "Animal")) 
+              && !trigger.alreadyTriggered)
         {
             trigger.TriggerDialogue();
         }

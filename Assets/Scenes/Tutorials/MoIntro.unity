@@ -149,6 +149,11 @@ PrefabInstance:
       value: You can jump over even bigger obstacles by pressing and holding down
         the up arrow or W.
       objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -258,6 +263,11 @@ PrefabInstance:
       propertyPath: dialogue.canvases.Array.data[1]
       value: 
       objectReference: {fileID: 1989155469}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -441,6 +451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
       value: Guess I'll take it. Maybe it'll come in handy later!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
@@ -895,6 +910,11 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[1]
       value: You can jump over small objects by tapping the up arrow or W.
       objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1315,6 +1335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
       value: Phew! Sure feels like I've been running for a long time...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
@@ -2380,6 +2405,11 @@ PrefabInstance:
       propertyPath: dialogue.canvases.Array.data[5]
       value: 
       objectReference: {fileID: 1989155469}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x

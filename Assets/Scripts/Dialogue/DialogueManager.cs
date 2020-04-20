@@ -25,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (dialogueStarted && Input.GetKeyDown(KeyCode.Return)) {
+        if (dialogueStarted && (Input.GetKeyDown(KeyCode.Return)) || Input.GetKeyDown(KeyCode.Space)) {
             DisplayNextSentence();
             clickSource.click.play();
         }

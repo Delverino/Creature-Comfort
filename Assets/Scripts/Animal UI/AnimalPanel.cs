@@ -129,6 +129,7 @@ public class AnimalPanel : MonoBehaviour
         // the game
         numAnimals = tp.animals.Count;
         updatePanel(currentlyHighlighted);
+        Debug.Log(tp.on);
         if (tp.on) 
         {
         var key = Input.inputString;
