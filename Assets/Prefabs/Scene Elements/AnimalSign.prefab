@@ -31,7 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.164, y: -5.6224, z: 0}
   m_LocalScale: {x: 0.08116172, y: 0.08116172, z: 0.08116172}
-  m_Children: []
+  m_Children:
+  - {fileID: 6459203174955288645}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -164,3 +165,128 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 21, y: 15.001465}
   m_EdgeRadius: 0
+--- !u!1001 &6442085121515868158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 539477481071186350}
+    m_Modifications:
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.723822
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1543217
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 276600548194223759, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 608381092325054407, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: E Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413588582576844623, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413588582576844623, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.29999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809561026151453847, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: AnimalSignArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494006117704181612, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: AnimalSign -E
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952018496007687998, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: AnimalSignCanvas - E
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.23907089
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 16.431126
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -1.6057057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 31.990505
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc98f5c69577546d096a608a586a9db1, type: 3}
+--- !u!4 &6459203174955288645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6442085121515868158}
+  m_PrefabAsset: {fileID: 0}

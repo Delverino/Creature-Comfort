@@ -198,6 +198,7 @@ Transform:
   m_Children:
   - {fileID: 1197919038543344102}
   - {fileID: 1197919038558727121}
+  - {fileID: 6552483155652293657}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,7 +255,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.5691073, y: 1.9286985}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -265,7 +266,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.968844, y: 4.857397}
   m_EdgeRadius: 0
 --- !u!114 &1197919038852141982
 MonoBehaviour:
@@ -367,3 +368,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &6497086704604935074
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1197919038852141981}
+    m_Modifications:
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.723822
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1543217
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 608381092325054407, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: E Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413588582576844623, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.4300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1413588582576844623, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 7.419998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809561026151453847, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: LeverArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494006117704181612, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: Lever -E
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952018496007687998, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Name
+      value: LeverCanvas - E
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dc98f5c69577546d096a608a586a9db1, type: 3}
+--- !u!4 &6552483155652293657 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6497086704604935074}
+  m_PrefabAsset: {fileID: 0}
