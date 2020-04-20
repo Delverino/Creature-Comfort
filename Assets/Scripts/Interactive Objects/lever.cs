@@ -21,7 +21,6 @@ public class lever : MonoBehaviour
 
     void Update()
     {
-        // temporarily using E as key
         if (triggerable && Input.GetKeyDown(KeyCode.E))
         {
             // leverPull.enabled = true;
