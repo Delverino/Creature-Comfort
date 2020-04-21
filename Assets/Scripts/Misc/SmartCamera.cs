@@ -25,6 +25,8 @@ public class SmartCamera : MonoBehaviour
 
     public List<view> views;
 
+    private float zoom;
+
     float wait_time = 0.1f;
     float stop_waiting = 0;
 
@@ -36,6 +38,10 @@ public class SmartCamera : MonoBehaviour
         main_view.transform = main_target;
         main_view.size = cam.orthographicSize;
         views.Add(main_view);
+    }
+
+    public void ZoomOut(){
+    	Debug.Log("zooming out");
     }
 
     private void FixedUpdate()
