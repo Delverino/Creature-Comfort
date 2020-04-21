@@ -42,8 +42,20 @@ public class parallax : MonoBehaviour
     {
         inverseScrollHorizontal();
 
-        Debug.Log("Inside left: " + insideLeft(filler[0]));
-        Debug.Log("Inside right: " + insideRight(filler[0]));
+        if (insideLeft(filler[0]))
+        {
+            Debug.Log("hi");
+            filler.Insert(0, Instantiate(filler[0], transform));
+            filler[0].transform.position -= Vector3.right * spriteWidth;
+        }
+
+        if (insideRight(filler[filler.Count - 1]))
+        {
+            filler.Insert(filler.Count, Instantiate(filler[filler.Count - 1], transform));
+            filler[filler.Count - 1].transform.position += Vector3.right * spriteWidth;
+
+        }
+
         /*        if (offLeft())
                 {
                     moveRight();
