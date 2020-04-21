@@ -11,6 +11,8 @@ public class ScoreCoins : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = PlayerPrefs.GetInt("TotalC");
+        text.text = "x" + score.ToString();
         if(instance == null)
         {
         	instance = this;
@@ -20,6 +22,7 @@ public class ScoreCoins : MonoBehaviour
     public void UpdateScore(int num)
     {
     	score += num;
+        PlayerPrefs.SetInt("TotalC", score);
     	text.text = "x" + score.ToString();
     }
 }
