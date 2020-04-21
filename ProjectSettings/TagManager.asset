@@ -10,6 +10,7 @@ TagManager:
   - Breakable
   - Coins
   - Banana
+  - Slot
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,7 @@ public class AnimalPanel : MonoBehaviour
 
     public Sprite highlightedSlot;
     public Sprite unhighlightedSlot;
+    public Sprite emptySlot;
 
     // Invariant: will never be higher than numAnimals
     private int currentlyHighlighted;
@@ -52,14 +53,14 @@ public class AnimalPanel : MonoBehaviour
         {
             if (i < numAnimals)
             {
-                Debug.Log("Setting Slot " + i + " to be unhighlighted");
                 slots[i].GetComponent<Image>().sprite = unhighlightedSlot;
             }
             else
             {
-                Debug.Log("Setting Slot " + i + " to be inactive");
-                slots[i].GetComponent<Image>().sprite = null;
+                slots[i].GetComponent<Image>().sprite = emptySlot;
+                slots[i].transform.GetChild(0).gameObject.SetActive(false);
             }
+                
         }
     }
 
@@ -71,12 +72,14 @@ public class AnimalPanel : MonoBehaviour
             if (i == highlighted)
             {
                 slots[i].GetComponent<Image>().sprite = highlightedSlot;
+                slots[i].transform.GetChild(0).gameObject.SetActive(true);
             } else if (i < numAnimals)
             {
                 slots[i].GetComponent<Image>().sprite = unhighlightedSlot;
+                slots[i].transform.GetChild(0).gameObject.SetActive(true);
             } else
             {
-                slots[i].GetComponent<Image>().sprite = null;
+                slots[i].GetComponent<Image>().sprite = emptySlot;
             }
         }
         currentlyHighlighted = highlighted;
@@ -127,9 +130,13 @@ public class AnimalPanel : MonoBehaviour
     {
         // Not sure if this is being called too often/if it could slow down
         // the game
-        numAnimals = tp.animals.Count;
-        updatePanel(currentlyHighlighted);
-        Debug.Log(tp.on);
+        if (numAnimals != tp.animals.Count) {
+            numAnimals = tp.animals.Count;
+            updatePanel(currentlyHighlighted);
+        }
+
+        
+        
         if (tp.on) 
         {
         var key = Input.inputString;
