@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598b20c463fc0b343a67ce08a1fe780d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  response: 0.1
+  response: 0.45
   tether: {fileID: 0}
 --- !u!1 &5774806500296479294
 GameObject:
@@ -252,5 +252,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598b20c463fc0b343a67ce08a1fe780d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  response: 0.1
+  response: 0.5
   tether: {fileID: 0}
