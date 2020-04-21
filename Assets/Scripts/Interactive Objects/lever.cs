@@ -42,6 +42,7 @@ public class lever : MonoBehaviour
         mo.enabled = false;
         mo.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         animal.enabled = true;
+        cam.ZoomOut();
         cam.Focus(animal.transform);
         Destroy(gameObject);
         tp.on = false;
