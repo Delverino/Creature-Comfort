@@ -41,6 +41,8 @@ public class parallax : MonoBehaviour
     private void Update()
     {
         inverseScrollHorizontal();
+        camHeight = 2f * cam.orthographicSize;
+        camWidth = camHeight * cam.aspect;
 
         if (insideLeft(filler[0]))
         {
@@ -53,7 +55,18 @@ public class parallax : MonoBehaviour
         {
             filler.Insert(filler.Count, Instantiate(filler[filler.Count - 1], transform));
             filler[filler.Count - 1].transform.position += Vector3.right * spriteWidth;
+        }
 
+        if(farRight(filler[filler.Count - 1]))
+        {
+            Destroy(filler[filler.Count - 1]);
+            filler.RemoveAt(filler.Count - 1);
+        }
+
+        if (farLeft(filler[0]))
+        {
+            Destroy(filler[0]);
+            filler.RemoveAt(0);
         }
 
         /*        if (offLeft())
@@ -65,7 +78,6 @@ public class parallax : MonoBehaviour
                 }*/
     }
 
-    #region old
     
         void inverseScrollHorizontal()
         {
@@ -76,20 +88,38 @@ public class parallax : MonoBehaviour
 
             transform.localPosition -= Vector3.right * xDiff * scrollSpeed;
         }
-    
-        bool insideLeft(GameObject g)
-        {
-            float leftSprite = g.transform.position.x - (spriteWidth / 2);
-            float leftCam = camTransform.position.x - (camWidth / 2);
-            return leftSprite > leftCam;
-        }
 
-        bool insideRight(GameObject g)
-      {
-            float rightSprite = g.transform.position.x + (spriteWidth / 2);
-            float rightCam = camTransform.position.x + (camWidth / 2);
-            return rightSprite < rightCam;
-        }
+    bool insideLeft(GameObject g)
+    {
+        float leftSprite = g.transform.position.x - (spriteWidth / 2);
+        float leftCam = camTransform.position.x - (camWidth / 2);
+        return leftSprite > leftCam;
+    }
+
+    bool insideRight(GameObject g)
+    {
+        float rightSprite = g.transform.position.x + (spriteWidth / 2);
+        float rightCam = camTransform.position.x + (camWidth / 2);
+        return rightSprite < rightCam;
+    }
+
+    bool farLeft(GameObject g)
+    {
+        float rightSprite = g.transform.position.x + (spriteWidth / 2);
+        float leftCam = camTransform.position.x - (camWidth / 2);
+        return rightSprite < leftCam;
+    }
+
+    bool farRight(GameObject g)
+    {
+        float leftSprite = g.transform.position.x - (spriteWidth / 2);
+        float rightCam = camTransform.position.x + (camWidth / 2);
+        return leftSprite > rightCam;
+    }
+
+
+
+    #region old
     /*
         void moveRight()
         {
