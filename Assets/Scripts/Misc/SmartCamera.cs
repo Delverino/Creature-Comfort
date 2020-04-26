@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SmartCamera : MonoBehaviour
 {
-
     public class view
     {
         public Transform transform;
@@ -38,6 +37,8 @@ public class SmartCamera : MonoBehaviour
     float minY;
     float maxY;
 
+    public float cinematicTime;
+
     Vector3 newPos;
 
     // Start is called before the first frame update
@@ -64,13 +65,24 @@ public class SmartCamera : MonoBehaviour
         views.Add(main_view);
     }
 
-    public void ZoomOut(){
-    	Debug.Log("zooming out");
+    public void TempFocus(GameObject focalPoint){
+        StartCoroutine(cinematic(focalPoint));
+        //cam.orthographicSize = 100;
+        Debug.Log("zooming out");
+    }
+
+    IEnumerator cinematic(GameObject focalPoint)
+    {
+        view new_view = new view();
+        new_view.transform = focalPoint.transform;
+        new_view.size = focalPoint.transform.localScale.y / 2;
+        views.Add(new_view);
+        yield return new WaitForSeconds(cinematicTime);
+        RemoveView(focalPoint.transform);
     }
 
     private void FixedUpdate()
     {
-
         if (Time.realtimeSinceStartup > stop_waiting)
         {
             transform.position = Vector3.Lerp(transform.position, views[views.Count - 1].transform.position, response);

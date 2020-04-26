@@ -12,6 +12,8 @@ public class lever : MonoBehaviour
     public CageOpen cage;
     private bool triggerable;
 
+    public GameObject focalPoint;
+
     void Start()
     {
         animal.enabled = false;
@@ -42,8 +44,12 @@ public class lever : MonoBehaviour
         mo.enabled = false;
         mo.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         animal.enabled = true;
-        cam.ZoomOut();
+        /*if(focalPoint != null)
+        {
+            focalPoint.transform.position = Vector3.up * -1000; //SetActive(false);
+        }*/
         cam.Focus(animal.transform);
+        cam.TempFocus(focalPoint);
         Destroy(gameObject);
         tp.on = false;
     }
