@@ -34,7 +34,6 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Starting dialogue");
-        Time.timeScale = 0f;
         
         // prevents restarting dialogue in the middle
         if (!dialogueStarted) {
@@ -65,7 +64,6 @@ public class DialogueManager : MonoBehaviour
             shutBubbles();
             dialogueStarted = false;
             tp.on = true;
-            Time.timeScale = 1f;
             return;
         }
 
@@ -81,19 +79,11 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence, Canvas bubble)
     {
         bubble.GetComponentInChildren<Text>().text = sentence;
-        // bubble.GetComponentInChildren<Text>().text = "";
 
-        // foreach(char letter in sentence.ToCharArray())
-        // {
-        //     bubble.GetComponentInChildren<Text>().text += letter;
-        //     yield return null;
-        // }
         char[] sentenceArray = sentence.ToCharArray();
 
         for (int i = 0; i < sentence.Length; i++)
         {
-            // char test = bubble.GetComponentInChildren<Text>().text[0];
-            // bubble.GetComponentInChildren<Text>().text += "<color=#038940>" + test + "</color>";
             bubble.GetComponentInChildren<Text>().text = "<color=#000>";
             for (int j = 0; j <= i; j++)
             {
@@ -105,23 +95,8 @@ public class DialogueManager : MonoBehaviour
                 bubble.GetComponentInChildren<Text>().text += sentenceArray[k];
             }
             
-
-            // bubble.GetComponentInChildren<Text>().text = 
-            //     bubble.GetComponentInChildren<Text>().text.Replace(
-            //         bubble.GetComponentInChildren<Text>().text[i].ToString(), 
-            //         "<color=#000000>" 
-            //             + bubble.GetComponentInChildren<Text>().text.ToCharArray()[i].ToString() 
-            //             + "</color>"
-            //         );
             yield return null;
-        }
-
-        // public UnityEngine.UI.Text myText;
-        // // Get index of character.
-        // int charIndex = myText.text.IndexOf ("S");
-        // // Replace text with color value for character.
-        // myText.text = myText.text.Replace (myText.text [charIndex].ToString (), "<color=#000000>" + myText.text [charIndex].ToString () + "</color>");
-        //     
+        }   
     }
 
     void shutBubbles()

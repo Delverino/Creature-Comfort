@@ -110,7 +110,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.033723474, y: 0.29000992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -121,7 +121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.9019248, y: 1.5800196}
   m_EdgeRadius: 0
 --- !u!1001 &7175117771185081554
 PrefabInstance:
@@ -220,6 +220,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door -E
       objectReference: {fileID: 0}
+    - target: {fileID: 5879856342076895036, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Animals can't open doors, silly!
+      objectReference: {fileID: 0}
     - target: {fileID: 5952018496007687998, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Name
@@ -228,22 +233,22 @@ PrefabInstance:
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Offset.x
-      value: -2.240837
+      value: -2.1936264
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Size.x
-      value: 5.294567
+      value: 2.9070396
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Offset.y
-      value: -1.7689629
+      value: -1.5194192
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.6183052
+      value: 1.5796633
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc98f5c69577546d096a608a586a9db1, type: 3}

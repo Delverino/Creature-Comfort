@@ -1134,15 +1134,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1888504400041432920, guid: d0445fba867344293a96d447a68fc4ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888504400041432920, guid: d0445fba867344293a96d447a68fc4ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.37
+      objectReference: {fileID: 0}
     - target: {fileID: 2906287368255586554, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3
+      value: 72.37
       objectReference: {fileID: 0}
     - target: {fileID: 2906287368255586554, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.2
+      value: 192.79
       objectReference: {fileID: 0}
     - target: {fileID: 6005779938811520042, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
@@ -2422,9 +2432,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
+      propertyPath: dialogue.canvases.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
       propertyPath: dialogue.canvases.Array.data[0]
       value: 
-      objectReference: {fileID: 1270253149}
+      objectReference: {fileID: 1989155469}
     - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: dialogue.canvases.Array.data[1]
@@ -2449,7 +2469,48 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.canvases.Array.data[5]
       value: 
+      objectReference: {fileID: 1270253149}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.canvases.Array.data[6]
+      value: 
       objectReference: {fileID: 1989155469}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: You can move side to side by using the left and right arrow keys, or
+        A and D.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: Well, guess I might as well explore in the meantime!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: Mom? Dad?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: What is this place...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Huh? Where did my parents go?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: You can move through dialogue using ENTER or SPACE.
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: triggerByPlayer

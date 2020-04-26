@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f50153a09156442168f55ab846a6fdcc, type: 3}
   m_Color: {r: 0.7019608, g: 0.57254905, b: 0.5137255, a: 1}
   m_FlipX: 0
@@ -114,7 +114,9 @@ MonoBehaviour:
   dialogue:
     canvases:
     - {fileID: 0}
+    - {fileID: 0}
     sentences:
+    - 
     - Kangaroos are marsupials, commonly found in Australia, with powerful hind legs
       that allow them to jump very high.
   alreadyTriggered: 0
@@ -152,7 +154,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.37864685, y: 2.7046244}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,7 +165,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21, y: 15.001465}
+  m_Size: {x: 25.435562, y: 15.001459}
   m_EdgeRadius: 0
 --- !u!1001 &6442085121515868158
 PrefabInstance:
@@ -267,6 +269,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalSign -E
       objectReference: {fileID: 0}
+    - target: {fileID: 5879856342076895036, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: dialogue.canvases.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5879856342076895036, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Animals can't read, silly!
+      objectReference: {fileID: 0}
     - target: {fileID: 5952018496007687998, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Name
@@ -275,22 +287,22 @@ PrefabInstance:
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.23907089
+      value: 0.94227314
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Size.y
-      value: 16.431126
+      value: 15.024721
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Offset.x
-      value: -1.6057057
+      value: -1.7679892
       objectReference: {fileID: 0}
     - target: {fileID: 8051470556046768696, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_Size.x
-      value: 31.990505
+      value: 25.391218
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc98f5c69577546d096a608a586a9db1, type: 3}

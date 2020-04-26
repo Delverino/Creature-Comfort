@@ -23,7 +23,7 @@ public class lever : MonoBehaviour
 
     void Update()
     {
-        if (triggerable && Input.GetKeyDown(KeyCode.E))
+        if (triggerable && Input.GetKeyDown(KeyCode.Space))
         {
             // leverPull.enabled = true;
             StartCoroutine(TriggerAnimation());

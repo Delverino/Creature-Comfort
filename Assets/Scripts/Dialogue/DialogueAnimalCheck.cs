@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueButtonCheck : MonoBehaviour
+public class DialogueAnimalCheck : MonoBehaviour
 {
     public DialogueTrigger trigger;
     private bool triggerable;
@@ -17,7 +17,7 @@ public class DialogueButtonCheck : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {   
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Animal")
         {
             triggerable = true;
         }
@@ -25,7 +25,7 @@ public class DialogueButtonCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Animal")
         {
             triggerable = false;
         }

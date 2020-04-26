@@ -527,6 +527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 788214771766887374, guid: c49513fea7ea14f599529d157b60a3b7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 788214772092703089, guid: c49513fea7ea14f599529d157b60a3b7,
         type: 3}
       propertyPath: m_LocalPosition.x
