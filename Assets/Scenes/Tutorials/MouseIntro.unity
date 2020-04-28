@@ -23868,6 +23868,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7694715285302899786, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: Cam
+      value: 
+      objectReference: {fileID: 1621185794}
     - target: {fileID: 7694715286153661792, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_Name

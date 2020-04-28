@@ -1903,7 +1903,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1262565370}
     - target: {fileID: 7694715286153661792, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_Name
