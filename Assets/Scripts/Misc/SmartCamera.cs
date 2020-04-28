@@ -83,6 +83,7 @@ public class SmartCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
+        curr_target = views[views.Count - 1].transform;
         if (Time.realtimeSinceStartup > stop_waiting)
         {
             transform.position = Vector3.Lerp(transform.position, views[views.Count - 1].transform.position, response);
@@ -92,11 +93,14 @@ public class SmartCamera : MonoBehaviour
             camHeight = 2f * cam.orthographicSize;
             camWidth = camHeight * cam.aspect;
 
-            newPos.y = Mathf.Clamp(transform.position.y, minY + (camHeight / 2), maxY - (camHeight / 2));
-            newPos.x = Mathf.Clamp(transform.position.x, minX + (camWidth / 2), maxX - (camWidth / 2));
-            newPos.z = -10;
+            if(maxY - minY > camHeight && maxX - minX > camWidth)
+            {
+                newPos.y = Mathf.Clamp(transform.position.y, minY + (camHeight / 2), maxY - (camHeight / 2));
+                newPos.x = Mathf.Clamp(transform.position.x, minX + (camWidth / 2), maxX - (camWidth / 2));
+                newPos.z = -10;
+                transform.position = newPos;
+            }
 
-            transform.position = newPos;
         }
     }
 
