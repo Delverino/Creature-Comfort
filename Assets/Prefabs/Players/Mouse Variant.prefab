@@ -112,6 +112,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Animal
       objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.002974987
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.46132326
+      objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_LocalScale.x
