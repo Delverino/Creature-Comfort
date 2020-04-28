@@ -6,14 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Kangaroo Scene.unity
-    guid: 714023bdad36c4dbcafdc3a0df44f6c0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/Complex Level.unity
+    guid: 9bfdba57ca1c9b44cbe9a1f18ab54d4c
   - enabled: 1
     path: Assets/Scenes/main_menu.unity
     guid: 2da239040000ac147b2d647d979b61b8
@@ -24,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorials/KangarooIntro.unity
     guid: 17a3dc82d87fb45e2b2038bde3d71b1c
   - enabled: 1
+    path: Assets/Scenes/Levels/LV00_2_P.unity
+    guid: f9b03da734feb4c428e82431d609ccbf
+  - enabled: 1
     path: Assets/Scenes/Tutorials/MouseIntro.unity
     guid: c5e04adc1002c42d7886806f9f8f0b58
   - enabled: 1
@@ -32,7 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorials/PuffIntro.unity
     guid: 0f08ced27b260e446a80cc327f12b423
-  - enabled: 0
-    path: Assets/Scenes/Complex Level.unity
-    guid: 9bfdba57ca1c9b44cbe9a1f18ab54d4c
+  - enabled: 1
+    path: Assets/Scenes/Final Scene.unity
+    guid: d9faddd42483e46509aee5aa6a863bb2
   m_configObjects: {}
