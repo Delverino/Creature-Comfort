@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class AnimalPanel : MonoBehaviour
 {
     public Canvas animalPanel;
     public TransformPlayer tp;
+    public CanvasGroup panelChildren;
+
 
     List<Button> slots = new List<Button>();
 
@@ -33,7 +36,8 @@ public class AnimalPanel : MonoBehaviour
     void Start()
     {
         animalPanel = GetComponent<Canvas> ();
-        
+        panelChildren = GetComponent<CanvasGroup>();
+
         currentlyHighlighted = 0;
 
         numAnimals = tp.animals.Count;
@@ -62,6 +66,20 @@ public class AnimalPanel : MonoBehaviour
             }
                 
         }
+
+        
+    }
+
+
+    public void showFullAlpha()
+    {
+        panelChildren.alpha = 1.0f;
+
+    }
+
+    private void OnMouseOver()
+    {
+        Debug.Log("on Mouse over");
     }
 
     // Updates which slot is highlighted based on which animal is selected
