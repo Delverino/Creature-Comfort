@@ -1899,6 +1899,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: door
       objectReference: {fileID: 0}
+    - target: {fileID: 7601473936359581659, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03372413
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601473936359581659, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.9019237
+      objectReference: {fileID: 0}
     - target: {fileID: 7601473936359581660, guid: d481ea71ac2bb6048a43912add0feb40,
         type: 3}
       propertyPath: destinationScene

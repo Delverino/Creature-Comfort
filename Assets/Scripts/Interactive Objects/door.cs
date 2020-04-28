@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class door : MonoBehaviour
 {
-    public int destinationScene;
+    //public int destinationScene;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene(destinationScene);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 }
