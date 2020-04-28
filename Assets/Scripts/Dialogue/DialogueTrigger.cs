@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    // TODO: make logic to track how many times been visited 
-    // so can use same phone for multiple conversations
+
     public Dialogue dialogue;
     public bool alreadyTriggered;
 
