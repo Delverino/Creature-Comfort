@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4540737327123766619, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.344
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737327875612562, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.426
+      objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837248, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Name
-      value: Mouse
+      value: Mouse Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
