@@ -9,7 +9,7 @@ public class DialogueButtonCheck : MonoBehaviour
     
     void Update()
     {
-        if (triggerable && Input.GetKeyDown(KeyCode.Space))
+        if (triggerable && Input.GetKeyDown(KeyCode.Space) && !trigger.alreadyTriggered)
         {
             trigger.TriggerDialogue();
         }
