@@ -11,6 +11,11 @@ public class clickSource : MonoBehaviour
     private void Awake()
     {
         clickBox = GetComponent<AudioSource>();
+        //click = this;
+    }
+
+    private void Start()
+    {
         click = this;
     }
 
