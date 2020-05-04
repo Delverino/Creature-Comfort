@@ -46,7 +46,7 @@ public class parallax : MonoBehaviour
 
         if (insideLeft(filler[0]))
         {
-            Debug.Log("hi");
+            //Debug.Log("hi");
             filler.Insert(0, Instantiate(filler[0], transform));
             filler[0].transform.position -= Vector3.right * spriteWidth;
         }
