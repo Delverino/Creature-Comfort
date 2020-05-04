@@ -1757,22 +1757,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4188853453922304514, guid: 5996bf296bc6d104d928dcfcb2757102,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 1148.9554
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188853453922304514, guid: 5996bf296bc6d104d928dcfcb2757102,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: f4f3435a104950e4b95219a9622ccb06,
-        type: 2}
-    - target: {fileID: 4188853453922304514, guid: 5996bf296bc6d104d928dcfcb2757102,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.95
-      objectReference: {fileID: 0}
     - target: {fileID: 4188853453922304515, guid: 5996bf296bc6d104d928dcfcb2757102,
         type: 3}
       propertyPath: m_LocalPosition.x
