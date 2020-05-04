@@ -68,7 +68,7 @@ public class SmartCamera : MonoBehaviour
     public void TempFocus(GameObject focalPoint){
         StartCoroutine(cinematic(focalPoint));
         //cam.orthographicSize = 100;
-        Debug.Log("zooming out");
+        //Debug.Log("zooming out");
     }
 
     IEnumerator cinematic(GameObject focalPoint)

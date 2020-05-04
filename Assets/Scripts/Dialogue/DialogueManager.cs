@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting dialogue");
+        //Debug.Log("Starting dialogue");
         
         // prevents restarting dialogue in the middle
         if (!dialogueStarted) {
@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
 
         Canvas bubble = bubbles.Dequeue();
         bubble.GetComponent<Canvas>().enabled = true;
-        Debug.Log(bubble);
+        //Debug.Log(bubble);
 
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
