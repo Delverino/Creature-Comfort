@@ -9,6 +9,7 @@ public class AnimalPanel : MonoBehaviour
     public Canvas animalPanel;
     public TransformPlayer tp;
     public CanvasGroup panelChildren;
+    public bool canTransform;
 
 
     List<Button> slots = new List<Button>();
@@ -37,7 +38,7 @@ public class AnimalPanel : MonoBehaviour
     {
         animalPanel = GetComponent<Canvas> ();
         panelChildren = GetComponent<CanvasGroup>();
-
+        canTransform = true;
         currentlyHighlighted = 0;
 
         numAnimals = tp.animals.Count;
@@ -71,17 +72,6 @@ public class AnimalPanel : MonoBehaviour
     }
 
 
-    public void showFullAlpha()
-    {
-        panelChildren.alpha = 1.0f;
-
-    }
-
-    private void OnMouseOver()
-    {
-        Debug.Log("on Mouse over");
-    }
-
     // Updates which slot is highlighted based on which animal is selected
     // Also super unoptimized code--there's definitely a better way to do this
     void updatePanel(int highlighted) {
@@ -101,46 +91,6 @@ public class AnimalPanel : MonoBehaviour
             }
         }
         currentlyHighlighted = highlighted;
-        //switch (highlighted)
-        //{
-        //    case 1:
-        //        slot1.GetComponent<Image>().sprite = highlightedSlot;
-        //        slot2.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot3.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot4.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot5.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        break;
-        //    case 2:
-        //        slot1.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot2.GetComponent<Image>().sprite = highlightedSlot;
-        //        slot3.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot4.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot5.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        break;
-        //    case 3:
-        //        slot1.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot2.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot3.GetComponent<Image>().sprite = highlightedSlot;
-        //        slot4.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot5.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        break;
-        //    case 4:
-        //        slot1.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot2.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot3.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot4.GetComponent<Image>().sprite = highlightedSlot;
-        //        slot5.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        break;
-        //    case 5:
-        //        slot1.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot2.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot3.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot4.GetComponent<Image>().sprite = unhighlightedSlot;
-        //        slot5.GetComponent<Image>().sprite = highlightedSlot;
-        //        break;
-        //    default:
-        //        break;
-        //}
     }
 
     // Update is called once per frame
@@ -155,38 +105,47 @@ public class AnimalPanel : MonoBehaviour
 
         
         
-        if (tp.on) 
+        if (tp.on && canTransform) 
         {
-        var key = Input.inputString;
+            var key = Input.inputString;
 
-        if (key == "1") 
-        {
-            Debug.Log("Setting Mo");
-            tp.SetActiveAnimal(0);
-            slot1.GetComponent<Image>().sprite = highlightedSlot;
-            updatePanel(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && 2 <= numAnimals)
-        {
-            Debug.Log("Setting Kangaroo");
-            tp.SetActiveAnimal(1);
-            updatePanel(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && 3 <= numAnimals) 
-        {
-            tp.SetActiveAnimal(2);
-            updatePanel(2);
+            if (key == "1") 
+            {
+                tp.SetActiveAnimal(0);
+                slot1.GetComponent<Image>().sprite = highlightedSlot;
+                updatePanel(0);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && 4 <= numAnimals) 
-        {
-            tp.SetActiveAnimal(3);
-            updatePanel(3);
+            if (Input.GetKeyDown(KeyCode.Alpha2) && 2 <= numAnimals)
+            {
+                tp.SetActiveAnimal(1);
+                updatePanel(1);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha5) && 5 <= numAnimals) 
-        {
-            tp.SetActiveAnimal(4);
-            updatePanel(4);
+            if (Input.GetKeyDown(KeyCode.Alpha3) && 3 <= numAnimals) 
+            {
+                tp.SetActiveAnimal(2);
+                updatePanel(2);
+                }
+            if (Input.GetKeyDown(KeyCode.Alpha4) && 4 <= numAnimals) 
+            {
+                tp.SetActiveAnimal(3);
+                updatePanel(3);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha5) && 5 <= numAnimals) 
+            {
+                tp.SetActiveAnimal(4);
+                updatePanel(4);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                if (canTransform) {
+                    Debug.Log("canTransform: True");
+                } else
+                {
+                    Debug.Log("canTransform: False");
+                }
+
+            }
+            
         }
-    }
     }
 }
