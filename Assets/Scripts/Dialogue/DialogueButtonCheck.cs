@@ -5,12 +5,15 @@ using UnityEngine;
 public class DialogueButtonCheck : MonoBehaviour
 {
     public DialogueTrigger trigger;
+    public DialogueManager dm;
     private bool triggerable;
     
     void Update()
     {
-        if (triggerable && Input.GetKeyDown(KeyCode.Space) && !trigger.alreadyTriggered)
+        Debug.Log(dm.dialogueStarted);
+        if (triggerable && Input.GetKeyDown(KeyCode.Space) && !dm.dialogueStarted)
         {
+            Debug.Log("triggering dialogue");
             trigger.TriggerDialogue();
         }
     }

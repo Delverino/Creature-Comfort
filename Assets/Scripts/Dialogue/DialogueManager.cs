@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences; // all sentences in THIS dialogue
     private Queue<Canvas> bubbles; // all speech bubbles in THIS dialogue
-    private bool dialogueStarted; // if currently engaged in dialogue
+    public bool dialogueStarted; // if currently engaged in dialogue
+    private int secondsSinceClick; // counts how long it's been since user last 
+                                   // moved through dialogue
 
     public TransformPlayer tp;
     
@@ -20,12 +22,18 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         bubbles = new Queue<Canvas>();
         dialogueStarted = false;
+        secondsSinceClick = 0;
         shutBubbles();
     }
 
     void Update()
     {
-        if (dialogueStarted && (Input.GetKeyDown(KeyCode.Return)) || Input.GetKeyDown(KeyCode.Space)) {
+        // Debug.Log(dialogueStarted);
+        if (dialogueStarted && 
+            (Input.GetKeyDown(KeyCode.Return)) 
+             || Input.GetKeyDown(KeyCode.Space)
+             || secondsSinceClick >= 5) 
+        {
             DisplayNextSentence();
             clickSource.click.play();
         }
@@ -33,7 +41,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //Debug.Log("Starting dialogue");
         
         // prevents restarting dialogue in the middle
         if (!dialogueStarted) {
@@ -58,21 +65,20 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         shutBubbles();
+        StartCoroutine(CountSecondsSinceClick());
 
         if (sentences.Count == 0)
         {
             shutBubbles();
-            dialogueStarted = false;
+            StartCoroutine(DelayRepeatDialogue());
             tp.on = true;
             return;
         }
 
         Canvas bubble = bubbles.Dequeue();
         bubble.GetComponent<Canvas>().enabled = true;
-        //Debug.Log(bubble);
 
         string sentence = sentences.Dequeue();
-        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence, bubble));
     }
 
@@ -105,5 +111,26 @@ public class DialogueManager : MonoBehaviour
         {
             canvas.GetComponent<Canvas>().enabled = false;
         }
+    }
+
+    IEnumerator CountSecondsSinceClick()
+    {
+        Debug.Log("counting seconds ");
+        secondsSinceClick = 0;
+
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log(secondsSinceClick);
+            yield return new WaitForSeconds(1);
+            secondsSinceClick++;
+            
+        }
+        
+    }
+    
+    IEnumerator DelayRepeatDialogue()
+    {
+        yield return new WaitForSeconds(1);
+        dialogueStarted = false;
     }
 }
