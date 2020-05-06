@@ -7,6 +7,8 @@ public class BreakOnCollide : MonoBehaviour
     public float BreakSpeed = 40;
     public Rigidbody2D body;
 
+
+    public AudioSource a;
     //float speed_buffer = 0;
 
     // Start is called before the first frame update
@@ -30,6 +32,7 @@ public class BreakOnCollide : MonoBehaviour
             if(collision.relativeVelocity.sqrMagnitude > BreakSpeed * BreakSpeed)
             {
                 Destroy(collision.gameObject);
+                a.Play();
             }
         }
     }
