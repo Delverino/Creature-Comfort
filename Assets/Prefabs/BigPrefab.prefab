@@ -506,6 +506,11 @@ PrefabInstance:
       propertyPath: dialogue.canvases.Array.data[0]
       value: 
       objectReference: {fileID: 4568390304177514343}
+    - target: {fileID: 3616535891029995167, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7601473936359581658, guid: d481ea71ac2bb6048a43912add0feb40,
         type: 3}
       propertyPath: m_Name
@@ -1174,6 +1179,11 @@ PrefabInstance:
       propertyPath: dialogue.canvases.Array.data[0]
       value: 
       objectReference: {fileID: 4568390304177514343}
+    - target: {fileID: 3616535891029995167, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7601473936359581658, guid: d481ea71ac2bb6048a43912add0feb40,
         type: 3}
       propertyPath: m_Name
