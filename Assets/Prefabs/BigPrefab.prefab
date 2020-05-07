@@ -1045,6 +1045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hands
       objectReference: {fileID: 0}
+    - target: {fileID: 5408538098203813417, guid: c1a1fedfbcd021f4593171c914f07451,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5976283318106493021, guid: c1a1fedfbcd021f4593171c914f07451,
         type: 3}
       propertyPath: tether
@@ -1119,6 +1124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9097211836563159434, guid: c1a1fedfbcd021f4593171c914f07451,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1a1fedfbcd021f4593171c914f07451, type: 3}
@@ -1250,6 +1260,16 @@ PrefabInstance:
       propertyPath: AudioSrc
       value: 
       objectReference: {fileID: 8647841192789893318}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.4001465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -144.64001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b956efbdb2ee77459251936b8ed0201, type: 3}
 --- !u!224 &4190945174534938543 stripped
