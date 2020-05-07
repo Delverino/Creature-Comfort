@@ -23982,6 +23982,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235730104151629482, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 392701733}
     - target: {fileID: 5372741231425570430, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_IsActive
@@ -27522,6 +27527,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.4001465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -144.64001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b956efbdb2ee77459251936b8ed0201, type: 3}
