@@ -118,15 +118,14 @@ public class AnimalPanel : MonoBehaviour
             numAnimals = tp.animals.Count;
             updatePanel(currentlyHighlighted);
         }
-
-        
-        
+        //Debug.Log("canTransform: " + canTransform);
         if (tp.on && canTransform) 
         {
             var key = Input.inputString;
 
             if (key == "1") 
             {
+
                 tp.SetActiveAnimal(0);
                 slot1.GetComponent<Image>().sprite = highlightedSlot;
                 updatePanel(0);

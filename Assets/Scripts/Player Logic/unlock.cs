@@ -11,7 +11,6 @@ public class unlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Animal"))
         {
-            
 
             tp.on = true;
             tp.animals.Add(collision.gameObject);
@@ -20,8 +19,8 @@ public class unlock : MonoBehaviour
             GetComponent<PlayerMovement>().enabled = true;
 
             // Set the animalPanel to transformable again
+            Debug.Log("Setting animalPanel to true");
             animalPanel.canTransform = true;
-
         }
     }
 }

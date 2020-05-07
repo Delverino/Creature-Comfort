@@ -11,6 +11,7 @@ public class lever : MonoBehaviour
     public Animator leverPull;
     public CageOpen cage;
     private bool triggerable;
+    public AnimalPanel animalPanel;
 
     public GameObject focalPoint;
 
@@ -52,6 +53,8 @@ public class lever : MonoBehaviour
         cam.TempFocus(focalPoint);
         Destroy(gameObject);
         tp.on = false;
+        Debug.Log("Setting animalPanel to false");
+        animalPanel.canTransform = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

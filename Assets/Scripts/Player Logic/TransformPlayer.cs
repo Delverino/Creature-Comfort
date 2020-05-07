@@ -5,7 +5,6 @@ using UnityEngine;
 public class TransformPlayer : MonoBehaviour
 {
     public static TransformPlayer Instance;
-    public AnimalPanel animalPanel;
 
     public List<GameObject> animals; // will be updated externally as animals
                                      // are unlocked
@@ -46,6 +45,7 @@ public class TransformPlayer : MonoBehaviour
     // returns previously active animal and sets new one
     public void SetActiveAnimal(int new_animal)
     {
+        Debug.Log("Animal Number: " + new_animal);
         // If not in the middle of an animal puzzle
         if (on)
         {
@@ -73,10 +73,12 @@ public class TransformPlayer : MonoBehaviour
             curr_animal = new_animal;
 
             
-        } else
-        {
-            // Set animal panel to be false: we are unlocking a new animal
-            animalPanel.canTransform = false;
         }
+        //else
+        //{
+        //    Debug.Log("Setting animalPanel to False");
+
+        //    animalPanel.canTransform = false;
+        //}
     }
 }
