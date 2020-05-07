@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
 	public static bool isPaused = false;
 	public GameObject PMenuUI;
 	public GameObject AudioSrc;
-    private int sceneID; 
+    private int sceneID;
+
+    public AudioMixer mixer;
+
+    private void Start()
+    {
+        AudioSrc = GameObject.FindGameObjectWithTag("Music");
+    }
 
     // Update is called once per frame
     void Update()
@@ -42,10 +50,13 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.SetInt("SaveL", sceneID);
     }
 
-	public void YesMusic(){
-		AudioSrc.SetActive(true);
-	}
-	public void NoMusic(){
-		AudioSrc.SetActive(false);
-	}
+	public void YesMusic()
+    {
+        mixer.SetFloat("MusicVol", 0);
+    }
+
+	public void NoMusic()
+    {
+        mixer.SetFloat("MusicVol", -80);
+    }
 }

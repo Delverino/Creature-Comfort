@@ -536,6 +536,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235730104151629482, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 1271138435}
     - target: {fileID: 5372741231425570426, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1806,6 +1811,16 @@ PrefabInstance:
       propertyPath: AudioSrc
       value: 
       objectReference: {fileID: 1860463843}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.4001465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6963071102795951016, guid: 1b956efbdb2ee77459251936b8ed0201,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -144.64001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b956efbdb2ee77459251936b8ed0201, type: 3}
 --- !u!114 &872147673 stripped
@@ -1986,6 +2001,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1271138435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777020753581448157, guid: 26267ef4edcaf43f7970a08a2b340346,
+    type: 3}
+  m_PrefabInstance: {fileID: 1971403701}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b202333a6b994c008abd2b0d182e344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1275949854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2255,6 +2282,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3007950993620052484, guid: 195e2750398d54b7b9cb15e26efaeb7c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.35498047
+      objectReference: {fileID: 0}
     - target: {fileID: 3007950993804251605, guid: 195e2750398d54b7b9cb15e26efaeb7c,
         type: 3}
       propertyPath: m_Name
@@ -2462,6 +2494,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1911726957 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 576807658804591570, guid: 45fe75754548a4ec8be328a344bba5ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 766095758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43a3a9f891d6428da6405f0ab3de0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1924046293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2653,6 +2697,12 @@ PrefabInstance:
       propertyPath: tp
       value: 
       objectReference: {fileID: 1765593882}
+    - target: {fileID: 5777020753581448157, guid: 26267ef4edcaf43f7970a08a2b340346,
+        type: 3}
+      propertyPath: emptySlot
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a87c68248f3440fd9fcb5c0eaf06931,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26267ef4edcaf43f7970a08a2b340346, type: 3}
 --- !u!114 &2137180407 stripped
@@ -2679,6 +2729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimalSign
       objectReference: {fileID: 0}
+    - target: {fileID: 539477481071186348, guid: 60e1372c33b5b45aeaad1ba251b416d2,
+        type: 3}
+      propertyPath: dm
+      value: 
+      objectReference: {fileID: 1911726957}
     - target: {fileID: 539477481071186350, guid: 60e1372c33b5b45aeaad1ba251b416d2,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -649,6 +649,18 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 167961927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &321969363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777020753581448157, guid: 26267ef4edcaf43f7970a08a2b340346,
+    type: 3}
+  m_PrefabInstance: {fileID: 1149634240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b202333a6b994c008abd2b0d182e344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &356994257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,12 +756,12 @@ PrefabInstance:
     - target: {fileID: 1888504400041432920, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: -19.8
       objectReference: {fileID: 0}
     - target: {fileID: 1888504400041432920, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.18
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: 2906287368255586554, guid: d0445fba867344293a96d447a68fc4ff,
         type: 3}
@@ -1024,7 +1036,7 @@ PrefabInstance:
     - target: {fileID: 358478561101806563, guid: 901689ccda6bfe740b08d17bdd83b512,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.332
+      value: 7.52
       objectReference: {fileID: 0}
     - target: {fileID: 358478561101806563, guid: 901689ccda6bfe740b08d17bdd83b512,
         type: 3}
@@ -1592,6 +1604,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 180538636836105045, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3605784234780156910, guid: d481ea71ac2bb6048a43912add0feb40,
         type: 3}
       propertyPath: dialogue.canvases.Array.data[0]
@@ -1661,6 +1678,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174050130973414220, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174050130973414220, guid: d481ea71ac2bb6048a43912add0feb40,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d481ea71ac2bb6048a43912add0feb40, type: 3}
@@ -1991,6 +2018,11 @@ PrefabInstance:
       propertyPath: focalPoint
       value: 
       objectReference: {fileID: 1784230449}
+    - target: {fileID: 1197919038852141982, guid: 759daa7d5a7d3459299e23c29386e3d4,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 321969363}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 759daa7d5a7d3459299e23c29386e3d4, type: 3}
 --- !u!1001 &1688521703
@@ -2000,6 +2032,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235730104151629482, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 321969363}
     - target: {fileID: 5372741231425570430, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_IsActive
@@ -2009,6 +2046,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6182015407408874945, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: jumpOverride
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6182015407408874946, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
@@ -2040,6 +2082,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1262565370}
+    - target: {fileID: 7694715286153661793, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 321969363}
     - target: {fileID: 7694715286153661794, guid: ab2ed2e4830e245189eaec95b5e7981e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2094,6 +2141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821393781241107885, guid: ab2ed2e4830e245189eaec95b5e7981e,
+        type: 3}
+      propertyPath: BypassEffects
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab2ed2e4830e245189eaec95b5e7981e, type: 3}

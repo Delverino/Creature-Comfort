@@ -10,7 +10,7 @@ public class DialogueButtonCheck : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(dm.dialogueStarted);
+        //Debug.Log(dm.dialogueStarted);
         if (triggerable && Input.GetKeyDown(KeyCode.Space) && !dm.dialogueStarted)
         {
             Debug.Log("triggering dialogue");

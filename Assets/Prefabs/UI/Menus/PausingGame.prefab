@@ -486,6 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PMenuUI: {fileID: 1839136389232592828}
   AudioSrc: {fileID: 0}
+  mixer: {fileID: 24100000, guid: f4f3435a104950e4b95219a9622ccb06, type: 2}
 --- !u!1 &1839136389232592828
 GameObject:
   m_ObjectHideFlags: 0

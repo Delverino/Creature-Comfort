@@ -627,6 +627,18 @@ PrefabInstance:
       objectReference: {fileID: 1971203993}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26267ef4edcaf43f7970a08a2b340346, type: 3}
+--- !u!114 &432878689 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777020753581448157, guid: 26267ef4edcaf43f7970a08a2b340346,
+    type: 3}
+  m_PrefabInstance: {fileID: 432878688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b202333a6b994c008abd2b0d182e344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &553864935 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7694715285302899786, guid: ab2ed2e4830e245189eaec95b5e7981e,
@@ -1581,6 +1593,11 @@ PrefabInstance:
       propertyPath: focalPoint
       value: 
       objectReference: {fileID: 1006139666}
+    - target: {fileID: 1197919038852141982, guid: 759daa7d5a7d3459299e23c29386e3d4,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 432878689}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 759daa7d5a7d3459299e23c29386e3d4, type: 3}
 --- !u!1001 &1771444302
