@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
-      value: When you're close, press E to interact with objects, including signs
+      value: When you're close, press SPACE to interact with objects, including signs
         and levers.
       objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299542, guid: 27535545a6c734aa680cf81225c8f2e7,
@@ -1527,6 +1527,11 @@ PrefabInstance:
       propertyPath: focalPoint
       value: 
       objectReference: {fileID: 1806134368}
+    - target: {fileID: 1197919038852141982, guid: 759daa7d5a7d3459299e23c29386e3d4,
+        type: 3}
+      propertyPath: animalPanel
+      value: 
+      objectReference: {fileID: 1271138435}
     - target: {fileID: 1197919038852141983, guid: 759daa7d5a7d3459299e23c29386e3d4,
         type: 3}
       propertyPath: m_Offset.x
