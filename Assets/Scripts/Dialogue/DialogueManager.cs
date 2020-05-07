@@ -120,7 +120,7 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Debug.Log(secondsSinceClick);
+            //Debug.Log(secondsSinceClick);
             yield return new WaitForSeconds(1);
             secondsSinceClick++;
             

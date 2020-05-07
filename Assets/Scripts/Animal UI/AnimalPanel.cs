@@ -59,6 +59,8 @@ public class AnimalPanel : MonoBehaviour
             if (i < numAnimals)
             {
                 slots[i].GetComponent<Image>().sprite = unhighlightedSlot;
+                //slots[i].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(i-1));
+                slots[i].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(i));
             }
             else
             {
@@ -67,8 +69,11 @@ public class AnimalPanel : MonoBehaviour
             }
                 
         }
-
-        
+        slots[0].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(0));
+        slots[1].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(1));
+        slots[2].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(2));
+        slots[3].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(3));
+        slots[4].GetComponent<Button>().onClick.AddListener(() => updateToAnimal(4));
     }
 
 
@@ -81,7 +86,8 @@ public class AnimalPanel : MonoBehaviour
             {
                 slots[i].GetComponent<Image>().sprite = highlightedSlot;
                 slots[i].transform.GetChild(0).gameObject.SetActive(true);
-            } else if (i < numAnimals)
+            }
+            else if (i < numAnimals)
             {
                 slots[i].GetComponent<Image>().sprite = unhighlightedSlot;
                 slots[i].transform.GetChild(0).gameObject.SetActive(true);
@@ -91,6 +97,16 @@ public class AnimalPanel : MonoBehaviour
             }
         }
         currentlyHighlighted = highlighted;
+    }
+
+    private void updateToAnimal(int animal)
+    {
+        if (animal < numAnimals)
+        {
+            tp.SetActiveAnimal(animal);
+            updatePanel(animal);
+        }
+        
     }
 
     // Update is called once per frame
@@ -145,7 +161,9 @@ public class AnimalPanel : MonoBehaviour
                 }
 
             }
+
             
+
         }
     }
 }
