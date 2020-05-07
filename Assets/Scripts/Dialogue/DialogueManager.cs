@@ -30,11 +30,17 @@ public class DialogueManager : MonoBehaviour
     {
         // Debug.Log(dialogueStarted);
         if (dialogueStarted && 
-            (Input.GetKeyDown(KeyCode.Return)) 
+            ((Input.GetKeyDown(KeyCode.Return)) 
              || Input.GetKeyDown(KeyCode.Space)
-             || secondsSinceClick >= 5) 
+             || secondsSinceClick == 5))
         {
             DisplayNextSentence();
+        }
+
+        if(dialogueStarted &&
+            ((Input.GetKeyDown(KeyCode.Return))
+             || Input.GetKeyDown(KeyCode.Space)))
+        {
             clickSource.click.play();
         }
     }
