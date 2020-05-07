@@ -104,6 +104,71 @@ PrefabInstance:
       propertyPath: m_Name
       value: MouseTilemap
       objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049746, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049746, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_Tiles.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileAssetArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileAssetArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_Origin.x
+      value: -69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_Origin.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559949851339049747, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 54
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89b23f1ebfbc24bdd9dc9ff8b21d1668, type: 3}
 --- !u!4 &1160799826627651180 stripped
