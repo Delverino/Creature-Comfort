@@ -119,6 +119,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2416866038414857860}
     m_Modifications:
+    - target: {fileID: 503383041286887681, guid: 51f049eb3ef194f2e96e59a63e4df339,
+        type: 3}
+      propertyPath: m_Name
+      value: NormalTilemap
+      objectReference: {fileID: 0}
     - target: {fileID: 7361932748086610882, guid: 51f049eb3ef194f2e96e59a63e4df339,
         type: 3}
       propertyPath: m_Name
