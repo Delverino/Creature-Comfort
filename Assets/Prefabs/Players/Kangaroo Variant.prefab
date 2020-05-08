@@ -7,6 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4540737327123766619, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737327875612562, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.035
+      objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837248, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,12 +90,22 @@ PrefabInstance:
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_Name
-      value: Kangaroo
+      value: Kangaroo Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
       propertyPath: m_TagString
       value: Animal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.49253213
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540737328117837261, guid: 68d1d21cc1ff530439d1535679bfd41b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.45768225
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b,
         type: 3}
