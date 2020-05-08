@@ -4987,6 +4987,7 @@ MonoBehaviour:
   cam: {fileID: 6005779938811520042}
   bottomLeftBound: {fileID: 1888504400041432920}
   topRightBound: {fileID: 2906287368255586554}
+  cinematicTime: 0
 --- !u!50 &6005779938811520022
 Rigidbody2D:
   serializedVersion: 4
@@ -5052,7 +5053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 945453a8de9649d4eaed187e80185f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 1
+  scrollSpeed: 0.8
   cam: {fileID: 6005779938811520042}
   filler:
   - {fileID: 6607662001495026336}
