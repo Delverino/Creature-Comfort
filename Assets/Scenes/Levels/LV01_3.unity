@@ -6328,6 +6328,11 @@ PrefabInstance:
       propertyPath: dialogue.sentences.Array.data[1]
       value: Okay, here we go...
       objectReference: {fileID: 0}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6336,7 +6341,7 @@ PrefabInstance:
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.74
+      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
