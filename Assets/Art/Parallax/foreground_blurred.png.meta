@@ -1,0 +1,647 @@
+fileFormatVersion: 2
+guid: ece4544356cbbfe4bb0cf1942662cd7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1327252002583849937
+    second: foreground_blurred_0
+  - first:
+      213: 7867914886425463929
+    second: foreground_blurred_1
+  - first:
+      213: 884598324144597189
+    second: foreground_blurred_2
+  - first:
+      213: 3734974926473946385
+    second: foreground_blurred_3
+  - first:
+      213: 8479191620516650310
+    second: foreground_blurred_4
+  - first:
+      213: 8264256661686601347
+    second: foreground_blurred_5
+  - first:
+      213: -2712166069807316749
+    second: foreground_blurred_6
+  - first:
+      213: -1854572248750363327
+    second: foreground_blurred_7
+  - first:
+      213: -5280350311109249774
+    second: foreground_blurred_8
+  - first:
+      213: 616883718539135761
+    second: foreground_blurred_9
+  - first:
+      213: -5750664339355591825
+    second: foreground_blurred_10
+  - first:
+      213: 7547839019835280647
+    second: foreground_blurred_11
+  - first:
+      213: -595720604359031893
+    second: foreground_blurred_12
+  - first:
+      213: 1254922868269306329
+    second: foreground_blurred_13
+  - first:
+      213: -521652349687775169
+    second: foreground_blurred_14
+  - first:
+      213: -9102064479801985493
+    second: foreground_blurred_15
+  - first:
+      213: 3163745315219830971
+    second: foreground_blurred_16
+  - first:
+      213: 5859583972308305098
+    second: foreground_blurred_17
+  - first:
+      213: -8285845150139523348
+    second: foreground_blurred_18
+  - first:
+      213: 3816858501496733748
+    second: foreground_blurred_19
+  - first:
+      213: 2562053560355971977
+    second: foreground_blurred_20
+  - first:
+      213: 7719837169475993610
+    second: foreground_blurred_21
+  - first:
+      213: -6467096103321739310
+    second: foreground_blurred_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: foreground_blurred_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 222
+        width: 216
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f245092f557a49de0800000000000000
+      internalID: -1327252002583849937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_1
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 83
+        width: 170
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cc56837e2703d60800000000000000
+      internalID: 7867914886425463929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_2
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 188
+        width: 139
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c86b8f2d79b64c00800000000000000
+      internalID: 884598324144597189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_3
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 170
+        width: 182
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115687928eb45d330800000000000000
+      internalID: 3734974926473946385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_4
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 218
+        width: 147
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d1d5baad32ca570800000000000000
+      internalID: 8479191620516650310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_5
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 420
+        width: 144
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3864c7cd5a980b270800000000000000
+      internalID: 8264256661686601347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_6
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 420
+        width: 192
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0844544537c5ad0800000000000000
+      internalID: -2712166069807316749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 488
+        width: 153
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14defee9d5c3346e0800000000000000
+      internalID: -1854572248750363327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_8
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 499
+        width: 165
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215b5b85e5d68b6b0800000000000000
+      internalID: -5280350311109249774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 478
+        width: 210
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b4f3f397c9f8800800000000000000
+      internalID: 616883718539135761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_10
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 683
+        width: 104
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b143e60498130b0800000000000000
+      internalID: -5750664339355591825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_11
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 692
+        width: 112
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d4d1f299f4fb860800000000000000
+      internalID: 7547839019835280647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_12
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 648
+        width: 140
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba38ccf34439bb7f0800000000000000
+      internalID: -595720604359031893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_13
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 624
+        width: 151
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1d4b723b16a6110800000000000000
+      internalID: 1254922868269306329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_14
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 637
+        width: 142
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30cc98a3f7b2c8f0800000000000000
+      internalID: -521652349687775169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_15
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 619
+        width: 112
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b26b3b69498fea180800000000000000
+      internalID: -9102064479801985493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_16
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 617
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8fb791a91e7eb20800000000000000
+      internalID: 3163745315219830971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_17
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 860
+        width: 281
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac44201d39c615150800000000000000
+      internalID: 5859583972308305098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_18
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 846
+        width: 163
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee5a0a7cb3c20d80800000000000000
+      internalID: -8285845150139523348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_19
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 867
+        width: 168
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43084a3a59438f430800000000000000
+      internalID: 3816858501496733748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 853
+        width: 147
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983ea88832e3e8320800000000000000
+      internalID: 2562053560355971977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: foreground_blurred_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 848
+        width: 130
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a004972110f522b60800000000000000
+      internalID: 7719837169475993610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
