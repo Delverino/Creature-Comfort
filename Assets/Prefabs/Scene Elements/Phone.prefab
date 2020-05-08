@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 2093902060282957080}
   - component: {fileID: 2093902060282957083}
   - component: {fileID: 1332125561832937659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,6 +329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2093902060282957082}
     m_Modifications:
+    - target: {fileID: 595620075189542611, guid: c426def25ffe2414ab36f916821c7f46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9201624541250548105, guid: c426def25ffe2414ab36f916821c7f46,
         type: 3}
       propertyPath: tp
@@ -338,6 +343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: master
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201624541895099781, guid: c426def25ffe2414ab36f916821c7f46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9201624541895099782, guid: c426def25ffe2414ab36f916821c7f46,
         type: 3}
@@ -354,6 +364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PhoneSentences
       objectReference: {fileID: 0}
+    - target: {fileID: 9201624541906598329, guid: c426def25ffe2414ab36f916821c7f46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9201624541906598331, guid: c426def25ffe2414ab36f916821c7f46,
         type: 3}
       propertyPath: m_FontData.m_Alignment
@@ -363,6 +378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PhoneCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201624542774651299, guid: c426def25ffe2414ab36f916821c7f46,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9201624542774651308, guid: c426def25ffe2414ab36f916821c7f46,
         type: 3}

@@ -34,6 +34,9 @@ public class DialogueManager : MonoBehaviour
              || Input.GetKeyDown(KeyCode.Space)
              || secondsSinceClick == 5))
         {
+            Debug.Log("cancelling");
+            StopCoroutine(CountSecondsSinceClick());
+            StartCoroutine(CountSecondsSinceClick());
             DisplayNextSentence();
         }
 
@@ -42,8 +45,6 @@ public class DialogueManager : MonoBehaviour
              || Input.GetKeyDown(KeyCode.Space)))
         {
             clickSource.click.play();
-            secondsSinceClick = 0;
-            StopCoroutine(CountSecondsSinceClick());
         }
     }
 
@@ -66,6 +67,7 @@ public class DialogueManager : MonoBehaviour
             dialogueStarted = true;
             tp.on = false;
 
+            StartCoroutine(CountSecondsSinceClick());
             DisplayNextSentence();
         }
     }
@@ -73,7 +75,6 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         shutBubbles();
-        StartCoroutine(CountSecondsSinceClick());
 
         if (sentences.Count == 0)
         {
@@ -123,6 +124,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator CountSecondsSinceClick()
     {
+        Debug.Log("Counting");
         secondsSinceClick = 0;
 
         yield return new WaitForSeconds(5);
