@@ -1873,7 +1873,7 @@ GameObject:
   - component: {fileID: 6079546854230154616}
   - component: {fileID: 2607178487603308086}
   - component: {fileID: 4346801599523404015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MouseTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
