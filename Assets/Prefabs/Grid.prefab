@@ -364,7 +364,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.7254902, g: 0.6509804, b: 0.58431375, a: 0.6509804}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_Origin: {x: -64, y: -28, z: 0}
   m_Size: {x: 189, y: 153, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
