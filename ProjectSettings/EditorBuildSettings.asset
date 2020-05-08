@@ -30,11 +30,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorials/MouseIntro.unity
     guid: c5e04adc1002c42d7886806f9f8f0b58
   - enabled: 1
-    path: Assets/Scenes/Levels/LV03_2.unity
-    guid: 18129f2cf92f13644ab387cb8c1361a7
-  - enabled: 1
     path: Assets/Scenes/Levels/LV01_3_P.unity
     guid: 1d4aea7db89810e4bb49aeeb6143f62a
+  - enabled: 1
+    path: Assets/Scenes/Levels/LV03_2.unity
+    guid: 18129f2cf92f13644ab387cb8c1361a7
   - enabled: 1
     path: Assets/Scenes/Tutorials/ElephantIntro.unity
     guid: 328ba6c7ccb8b49c5922769808340a74
