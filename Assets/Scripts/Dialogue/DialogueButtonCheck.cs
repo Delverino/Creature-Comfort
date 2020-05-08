@@ -22,6 +22,7 @@ public class DialogueButtonCheck : MonoBehaviour
     {   
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("triggering");
             triggerable = true;
         }
     }

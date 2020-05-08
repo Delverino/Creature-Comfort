@@ -42,6 +42,8 @@ public class DialogueManager : MonoBehaviour
              || Input.GetKeyDown(KeyCode.Space)))
         {
             clickSource.click.play();
+            secondsSinceClick = 0;
+            StopCoroutine(CountSecondsSinceClick());
         }
     }
 
@@ -121,17 +123,10 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator CountSecondsSinceClick()
     {
-        Debug.Log("counting seconds ");
         secondsSinceClick = 0;
 
-        for (int i = 0; i < 5; i++)
-        {
-            //Debug.Log(secondsSinceClick);
-            yield return new WaitForSeconds(1);
-            secondsSinceClick++;
-            
-        }
-        
+        yield return new WaitForSeconds(5);
+        secondsSinceClick = 5;
     }
     
     IEnumerator DelayRepeatDialogue()
