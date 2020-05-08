@@ -306,13 +306,18 @@ PrefabInstance:
     - target: {fileID: 5342318336435841402, guid: 077a471eb117b42f888c997d5b86ddbd,
         type: 3}
       propertyPath: dialogueCanvases.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5342318336435841402, guid: 077a471eb117b42f888c997d5b86ddbd,
         type: 3}
       propertyPath: dialogueCanvases.Array.data[2]
       value: 
       objectReference: {fileID: 1754488268}
+    - target: {fileID: 5342318336435841402, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: dialogueCanvases.Array.data[3]
+      value: 
+      objectReference: {fileID: 452864465}
     - target: {fileID: 6347772022559566917, guid: 077a471eb117b42f888c997d5b86ddbd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -676,6 +681,12 @@ PrefabInstance:
       objectReference: {fileID: 1751233339}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ec61959e5cf646be9797b0884d8510e, type: 3}
+--- !u!223 &452864465 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8591973825291048386, guid: 077a471eb117b42f888c997d5b86ddbd,
+    type: 3}
+  m_PrefabInstance: {fileID: 17718050}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &630089547
 PrefabInstance:
   m_ObjectHideFlags: 0
