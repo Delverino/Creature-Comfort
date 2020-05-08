@@ -124,10 +124,10 @@ public class PlayerMovement : MonoBehaviour
 
             case "falling":  // set in freefall
                              //body.gravityScale = base_gravity;
-                if (Input.GetAxis("Vertical") == 1 && Time.time < TransformPlayer.Instance.jump_begin + jump_time + hang_time)
+                /*if (Input.GetAxis("Vertical") == 1 && Time.time < TransformPlayer.Instance.jump_begin + jump_time + hang_time)
                 {
                     TransformPlayer.Instance.state = "floating";
-                }
+                }*/
                 body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
                 //jump_end = 0;
                 break;
