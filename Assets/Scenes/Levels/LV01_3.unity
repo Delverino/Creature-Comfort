@@ -128,6 +128,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 625241778149399799, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722749970959011753, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722749972152737615, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948625694941665256, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: animals.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4765513994616154428, guid: 077a471eb117b42f888c997d5b86ddbd,
         type: 3}
       propertyPath: m_Name
@@ -6127,6 +6147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tiles.Array.data[45].second.m_AllTileFlags
       value: 1073741825
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656213034805324147, guid: 077a471eb117b42f888c997d5b86ddbd,
+        type: 3}
+      propertyPath: numAnimals
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 077a471eb117b42f888c997d5b86ddbd, type: 3}
