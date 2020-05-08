@@ -19,7 +19,7 @@ public class door : MonoBehaviour
     IEnumerator nextLevel()
     {
         anim.SetTrigger("end");
-        yield return new WaitForSeconds(0.99f);
+        yield return new WaitForSeconds(0.49f);
         PlayerPrefs.SetInt("SaveL",SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
