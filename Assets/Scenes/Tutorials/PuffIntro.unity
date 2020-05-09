@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 8109054186172529986, guid: d8129b71edae7494e9aa54bb8c5aeda5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8109054186172529986, guid: d8129b71edae7494e9aa54bb8c5aeda5,
         type: 3}
@@ -577,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 5777020753581448156, guid: 26267ef4edcaf43f7970a08a2b340346,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5777020753581448156, guid: 26267ef4edcaf43f7970a08a2b340346,
         type: 3}
@@ -1149,7 +1149,7 @@ PrefabInstance:
     - target: {fileID: 4784379987787279107, guid: 1b956efbdb2ee77459251936b8ed0201,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4784379987787279107, guid: 1b956efbdb2ee77459251936b8ed0201,
         type: 3}
@@ -1313,7 +1313,7 @@ PrefabInstance:
     - target: {fileID: 46764254069582947, guid: 3b36b528ae93b45568a845e7266257bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 46764254069582947, guid: 3b36b528ae93b45568a845e7266257bb,
         type: 3}
@@ -1921,6 +1921,11 @@ PrefabInstance:
       propertyPath: dialogue.canvases.Array.data[0]
       value: 
       objectReference: {fileID: 1221863228}
+    - target: {fileID: 6200490969830299543, guid: 27535545a6c734aa680cf81225c8f2e7,
+        type: 3}
+      propertyPath: triggerByAnimal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6200490969830299625, guid: 27535545a6c734aa680cf81225c8f2e7,
         type: 3}
       propertyPath: m_LocalPosition.x
