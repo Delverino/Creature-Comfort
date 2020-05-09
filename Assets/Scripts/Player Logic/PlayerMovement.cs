@@ -49,12 +49,35 @@ public class PlayerMovement : MonoBehaviour
 
     //public TransformPlayer manager;
 
+
+    // Accounting for Mouse
+    private bool isMouse;
+    public Transform top;
+    public Transform left;
+    public Transform right;
+    public AnimalPanel animalPanel;
+
     float base_gravity;
     private void Awake()
     {
         base_gravity = body.gravityScale;
     }
-    
+
+    private void Start()
+    {
+        if (top == null || left == null || right == null)
+        {
+            isMouse = false;
+            top = new GameObject().transform;
+            left = new GameObject().transform;
+            right = new GameObject().transform;
+        }
+        else
+        {
+            isMouse = true;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -68,6 +91,38 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpInput(); 
         }
+
+        if (Physics2D.OverlapCircle(left_foot.position, 0.01f, jumpable) || Physics2D.OverlapCircle(right_foot.position, 0.01f, jumpable))
+        {
+            if (isMouse)
+            {
+                if ((Physics2D.OverlapCircle(top.position, 0.01f, jumpable)) || (Physics2D.OverlapCircle(left.position, 0.01f, jumpable)) || (Physics2D.OverlapCircle(left.position, 0.01f, jumpable)))
+                {
+                    Debug.Log("In moss");
+                    animalPanel.canTransform = false;
+                } else
+                {
+                    Debug.Log("not in moss");
+                    animalPanel.canTransform = true;
+                }
+                    
+            } 
+            
+        }
+
+
+        //if (Physics2D.OverlapCircle(top.position, 0.01f, jumpable) && isMouse)
+        //{
+        //    Debug.Log("Touching top");
+        //}
+        //if (Physics2D.OverlapCircle(left.position, 0.01f, jumpable) && isMouse)
+        //{
+        //    Debug.Log("Touching left");
+        //}
+        //if (Physics2D.OverlapCircle(right.position, 0.01f, jumpable) && isMouse)
+        //{
+        //    Debug.Log("Touching right");
+        //}
     }
 
     void jump()
