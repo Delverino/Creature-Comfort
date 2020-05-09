@@ -20,6 +20,13 @@ public class devSkips : MonoBehaviour
         levelDictionary.Add(KeyCode.Alpha6, 6);
         levelDictionary.Add(KeyCode.Alpha7, 7);
         levelDictionary.Add(KeyCode.Alpha8, 8);
+        levelDictionary.Add(KeyCode.Alpha9, 9);
+        levelDictionary.Add(KeyCode.Q, 10);
+        levelDictionary.Add(KeyCode.W, 11);
+        levelDictionary.Add(KeyCode.E, 12);
+        levelDictionary.Add(KeyCode.R, 13);
+        levelDictionary.Add(KeyCode.T, 14);
+        levelDictionary.Add(KeyCode.Y, 15);
     }
 
     // Update is called once per frame
