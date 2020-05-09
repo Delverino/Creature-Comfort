@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
                                    // moved through dialogue
 
     public TransformPlayer tp;
+
+    float afkTime = 5;
+    float endAFK = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -32,11 +35,8 @@ public class DialogueManager : MonoBehaviour
         if (dialogueStarted && 
             ((Input.GetKeyDown(KeyCode.Return)) 
              || Input.GetKeyDown(KeyCode.Space)
-             || secondsSinceClick == 5))
+             || Time.realtimeSinceStartup >= endAFK ))
         {
-            Debug.Log("cancelling");
-            StopCoroutine(CountSecondsSinceClick());
-            StartCoroutine(CountSecondsSinceClick());
             DisplayNextSentence();
         }
 
@@ -67,7 +67,6 @@ public class DialogueManager : MonoBehaviour
             dialogueStarted = true;
             tp.on = false;
 
-            StartCoroutine(CountSecondsSinceClick());
             DisplayNextSentence();
         }
     }
@@ -75,6 +74,8 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         shutBubbles();
+
+        endAFK = afkTime + Time.realtimeSinceStartup;
 
         if (sentences.Count == 0)
         {
@@ -120,15 +121,6 @@ public class DialogueManager : MonoBehaviour
         {
             canvas.GetComponent<Canvas>().enabled = false;
         }
-    }
-
-    IEnumerator CountSecondsSinceClick()
-    {
-        Debug.Log("Counting");
-        secondsSinceClick = 0;
-
-        yield return new WaitForSeconds(5);
-        secondsSinceClick = 5;
     }
     
     IEnumerator DelayRepeatDialogue()
