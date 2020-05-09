@@ -28,16 +28,20 @@ public class lever : MonoBehaviour
         {
             // leverPull.enabled = true;
             StartCoroutine(TriggerAnimation());
+
         }
     }
 
     IEnumerator TriggerAnimation()
     {
         leverPull.enabled = true;
+        Debug.Log("Setting animalPanel to false");
+        animalPanel.canTransform = false;
         yield return new WaitForSeconds(2);
         
         BecomeAnimal();
         cage.cageOpen.enabled = true;
+
     }
 
     private void BecomeAnimal()
@@ -53,8 +57,7 @@ public class lever : MonoBehaviour
         cam.TempFocus(focalPoint);
         Destroy(gameObject);
         tp.on = false;
-        Debug.Log("Setting animalPanel to false");
-        animalPanel.canTransform = false;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
