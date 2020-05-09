@@ -192,12 +192,12 @@ PrefabInstance:
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
       propertyPath: dialogue.sentences.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
       propertyPath: dialogue.canvases.Array.size
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
@@ -221,18 +221,8 @@ PrefabInstance:
       objectReference: {fileID: 429432447}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
-      propertyPath: dialogue.sentences.Array.data[3]
-      value: Guys? Why do I keep getting your voicemail?
-      objectReference: {fileID: 0}
-    - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[4]
-      value: Is something wrong? Are you okay?
-      objectReference: {fileID: 0}
-    - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
-        type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
-      value: Me and my animal friends are coming to save you!
+      value: Guys? Why do I keep getting your voicemail?
       objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
@@ -241,14 +231,24 @@ PrefabInstance:
       objectReference: {fileID: 429432447}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
-      propertyPath: dialogue.canvases.Array.data[3]
+      propertyPath: dialogue.canvases.Array.data[6]
       value: 
       objectReference: {fileID: 429432447}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
-      propertyPath: dialogue.canvases.Array.data[4]
+      propertyPath: dialogue.canvases.Array.data[7]
       value: 
       objectReference: {fileID: 429432447}
+    - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: Is something wrong? Are you okay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: Me and my animal friends are coming to save you!
+      objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957087, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
       propertyPath: m_Name
