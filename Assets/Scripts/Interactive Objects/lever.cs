@@ -26,8 +26,11 @@ public class lever : MonoBehaviour
     {
         if (triggerable && Input.GetKeyDown(KeyCode.Space))
         {
+
             // leverPull.enabled = true;
             StartCoroutine(TriggerAnimation());
+            Debug.Log("Setting animalPanel to false");
+            animalPanel.canTransform = false;
 
         }
     }
@@ -35,8 +38,7 @@ public class lever : MonoBehaviour
     IEnumerator TriggerAnimation()
     {
         leverPull.enabled = true;
-        Debug.Log("Setting animalPanel to false");
-        animalPanel.canTransform = false;
+        
         yield return new WaitForSeconds(2);
         
         BecomeAnimal();
@@ -65,6 +67,9 @@ public class lever : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             triggerable = true;
+        } else
+        {
+            triggerable = false;
         }
     }
 
