@@ -632,12 +632,12 @@ PrefabInstance:
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: Good thing I picked that coin up earlier!
+      value: Maybe if I call my parents they can find me.
       objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957084, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: A payphone! It needs a coin...
+      value: A phone!
       objectReference: {fileID: 0}
     - target: {fileID: 2093902060282957087, guid: 3ec61959e5cf646be9797b0884d8510e,
         type: 3}
