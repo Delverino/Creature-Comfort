@@ -85,11 +85,19 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        Canvas bubble = bubbles.Dequeue();
-        bubble.GetComponent<Canvas>().enabled = true;
+        if (bubbles.Count > 0)
+        {
+            Canvas bubble = bubbles.Dequeue();
+            bubble.GetComponent<Canvas>().enabled = true;
+            if (sentences.Count > 0)
+            {
+                string sentence = sentences.Dequeue();
+                StartCoroutine(TypeSentence(sentence, bubble));
+            }
+        }
+        
 
-        string sentence = sentences.Dequeue();
-        StartCoroutine(TypeSentence(sentence, bubble));
+        
     }
 
     IEnumerator TypeSentence(string sentence, Canvas bubble)

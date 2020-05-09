@@ -19,14 +19,16 @@ public class DialogueAnimalCheck : MonoBehaviour
     {   
         if (collision.gameObject.tag == "Animal")
         {
+            Debug.Log("Triggerable true");
             triggerable = true;
-        }
+        } 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Animal")
         {
+            Debug.Log("Triggerable false");
             triggerable = false;
         }
     }

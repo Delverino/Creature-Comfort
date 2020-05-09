@@ -286,6 +286,7 @@ MonoBehaviour:
   tp: {fileID: 0}
   leverPull: {fileID: 0}
   cage: {fileID: 0}
+  animalPanel: {fileID: 0}
   focalPoint: {fileID: 0}
 --- !u!1 &1197919039004025156
 GameObject:
@@ -429,6 +430,11 @@ PrefabInstance:
     - target: {fileID: 55540016989947835, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523070969336263596, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 608381092325054407, guid: dc98f5c69577546d096a608a586a9db1,

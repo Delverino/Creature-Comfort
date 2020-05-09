@@ -719,6 +719,11 @@ PrefabInstance:
       propertyPath: animalPanel
       value: 
       objectReference: {fileID: 1888988714}
+    - target: {fileID: 6730660056732827662, guid: 759daa7d5a7d3459299e23c29386e3d4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 759daa7d5a7d3459299e23c29386e3d4, type: 3}
 --- !u!95 &637438781 stripped
@@ -894,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: -84.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783740517857573970, guid: 60e1372c33b5b45aeaad1ba251b416d2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60e1372c33b5b45aeaad1ba251b416d2, type: 3}

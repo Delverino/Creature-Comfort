@@ -101,7 +101,7 @@ public class AnimalPanel : MonoBehaviour
 
     private void updateToAnimal(int animal)
     {
-        if (animal < numAnimals)
+        if ((animal < numAnimals) && canTransform)
         {
             tp.SetActiveAnimal(animal);
             updatePanel(animal);
@@ -125,7 +125,6 @@ public class AnimalPanel : MonoBehaviour
 
             if (key == "1") 
             {
-
                 tp.SetActiveAnimal(0);
                 slot1.GetComponent<Image>().sprite = highlightedSlot;
                 updatePanel(0);

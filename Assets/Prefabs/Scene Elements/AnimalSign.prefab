@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 539477481071186351}
+  dm: {fileID: 0}
 --- !u!114 &539477481071186351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539477481071186344}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 715a652c6177441d4b2d6aab81db99a6, type: 3}
   m_Name: 
@@ -232,6 +233,11 @@ PrefabInstance:
     - target: {fileID: 276600548194223759, guid: dc98f5c69577546d096a608a586a9db1,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 523070969336263596, guid: dc98f5c69577546d096a608a586a9db1,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 608381092325054407, guid: dc98f5c69577546d096a608a586a9db1,
