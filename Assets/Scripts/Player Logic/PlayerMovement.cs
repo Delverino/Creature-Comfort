@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isMouse)
             {
-                if ((Physics2D.OverlapCircle(top.position, 0.01f, jumpable)) || (Physics2D.OverlapCircle(left.position, 0.01f, jumpable)) || (Physics2D.OverlapCircle(left.position, 0.01f, jumpable)))
+                if ((Physics2D.OverlapCircle(top.position, 0.1f, jumpable)) || (Physics2D.OverlapCircle(left.position, 0.03f, jumpable)) || (Physics2D.OverlapCircle(right.position, 0.03f, jumpable)))
                 {
                     Debug.Log("In moss");
                     animalPanel.canTransform = false;
